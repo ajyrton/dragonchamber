@@ -1,0 +1,53 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Cartas TCG Dragon Chamber</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Poppins:wght@400;500;600&display=swap">
+<style>
+/* Layout: sala oscura con cuatro dorsos grandes en fila; cada uno se inclina hacia el ratón con brillo holográfico */
+:root{--bg:#f3f1f8;--fg:#1b1730;--muted:#5d5878;--gold:#a9821a;--panel:#e4e0f0;--chip:#1b1730;--chipfg:#f5d76e;--shadow:rgba(40,20,80,.35);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f0e1a;--fg:#ecebf5;--muted:#a6a2bf;--gold:#e5c04b;--panel:#1a1830;--chip:#f5d76e;--chipfg:#1b1730;--shadow:rgba(0,0,0,.7);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f0e1a;--fg:#ecebf5;--muted:#a6a2bf;--gold:#e5c04b;--panel:#1a1830;--chip:#f5d76e;--chipfg:#1b1730;--shadow:rgba(0,0,0,.7);color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:16px/1.5 Poppins,system-ui,sans-serif;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:40px 56px}
+.wrap{max-width:1200px;margin:0 auto}
+h1{font:800 clamp(28px,5vw,48px)/1.1 Cinzel,serif;margin:0 0 8px;text-wrap:balance}
+.lead{color:var(--muted);margin:0 0 40px;max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:36px 28px;perspective:1000px}
+.tcg{display:flex;flex-direction:column;align-items:center;gap:18px;text-decoration:none;color:inherit;min-width:0}
+.card{position:relative;width:min(100%,260px);aspect-ratio:5/7;border-radius:16px;transform-style:preserve-3d;
+ transform:rotateX(var(--rx,0)) rotateY(var(--ry,0));transition:transform .25s ease,box-shadow .25s;box-shadow:0 16px 30px var(--shadow);overflow:hidden}
+.tcg:hover .card,.tcg:focus-visible .card{box-shadow:0 30px 50px var(--shadow)}
+.card svg{width:100%;height:100%;display:block}
+.card::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .25s;
+ background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.55),transparent 45%),linear-gradient(115deg,transparent 30%,rgba(255,220,120,.25) 45%,rgba(120,200,255,.25) 55%,transparent 70%);mix-blend-mode:overlay}
+.tcg:hover .card::after,.tcg:focus-visible .card::after{opacity:1}
+.tcg:focus-visible{outline:3px solid var(--gold);outline-offset:8px;border-radius:12px}
+.name{font:800 20px/1.2 Cinzel,serif;text-align:center}
+.go{font-size:13px;font-weight:600;background:var(--chip);color:var(--chipfg);padding:4px 14px;border-radius:999px;transition:transform .2s}
+.tcg:hover .go{transform:translateY(-3px)}
+.acc{margin-top:56px;background:var(--panel);padding:20px 24px;border-radius:14px}
+.acc h2{font:600 13px/1 Poppins;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px;color:var(--muted)}
+.acc div{display:flex;flex-wrap:wrap;gap:10px}
+.acc a{color:var(--fg);text-decoration:none;border:1px solid var(--muted);padding:6px 14px;border-radius:999px;font-size:14px}
+.acc a:hover{border-color:var(--gold);color:var(--gold)}
+@media (prefers-reduced-motion:reduce){.card,.go{transition:none}}
+</style>
+<div class="wrap">
+<h1>Cartas coleccionables</h1>
+<p class="lead">Elige tu juego. Cartas sueltas, sobres, cajas y mazos de cada TCG, con envío desde Almería.</p>
+<div class="grid">
+ <a class="tcg" href="https://thedragonchambergames.com/prestashop/179-magic-the-gathering"><div class="card"><svg viewBox="0 0 250 350"><rect width="250" height="350" fill="#2b1650"/><rect x="10" y="10" width="230" height="330" rx="10" fill="none" stroke="#e5c04b" stroke-width="3"/><circle cx="125" cy="175" r="88" fill="none" stroke="#e5c04b" stroke-width="2"/><g stroke="#e5c04b" stroke-width="2" fill="none"><polygon points="125,95 200,150 172,238 78,238 50,150"/><polygon points="125,255 50,200 78,112 172,112 200,200"/></g><g><circle cx="125" cy="88" r="12" fill="#f4eecf"/><circle cx="205" cy="146" r="12" fill="#3f8fd8"/><circle cx="175" cy="240" r="12" fill="#222"/><circle cx="75" cy="240" r="12" fill="#d8453b"/><circle cx="45" cy="146" r="12" fill="#3aa757"/></g><circle cx="125" cy="175" r="16" fill="#e5c04b"/></svg></div><div class="name">Magic: The Gathering</div><span class="go">Ver productos</span></a>
+ <a class="tcg" href="https://thedragonchambergames.com/prestashop/181-yu-gi-oh"><div class="card"><svg viewBox="0 0 250 350"><defs><radialGradient id="y" cx=".5" cy=".5" r=".6"><stop offset="0" stop-color="#7a3a14"/><stop offset="1" stop-color="#2a1208"/></radialGradient></defs><rect width="250" height="350" fill="url(#y)"/><rect x="10" y="10" width="230" height="330" rx="10" fill="none" stroke="#f0c36a" stroke-width="3"/><g fill="none" stroke="#f0c36a" stroke-width="2.5"><path d="M125 70 L200 230 L50 230Z"/><path d="M125 280 L50 120 L200 120Z"/><circle cx="125" cy="175" r="26"/></g><circle cx="125" cy="175" r="10" fill="#f0c36a"/></svg></div><div class="name">Yu-Gi-Oh!</div><span class="go">Ver productos</span></a>
+ <a class="tcg" href="https://thedragonchambergames.com/prestashop/182--one-piece-card-game"><div class="card"><svg viewBox="0 0 250 350"><rect width="250" height="350" fill="#0e2a4d"/><g fill="none" stroke="#6cc3e8" stroke-width="2.5" opacity=".7"><path d="M0 250 q31 -24 62 0 t62 0 t62 0 t64 0"/><path d="M0 280 q31 -24 62 0 t62 0 t62 0 t64 0"/><path d="M0 310 q31 -24 62 0 t62 0 t62 0 t64 0"/></g><rect x="10" y="10" width="230" height="330" rx="10" fill="none" stroke="#f3d27a" stroke-width="3"/><circle cx="125" cy="140" r="64" fill="none" stroke="#f3d27a" stroke-width="3"/><path d="M125 76 L137 140 L125 204 L113 140Z" fill="#d94a3a"/><path d="M61 140 L125 128 L189 140 L125 152Z" fill="#f3d27a"/><circle cx="125" cy="140" r="7" fill="#0e2a4d"/></svg></div><div class="name">One Piece Card Game</div><span class="go">Ver productos</span></a>
+ <a class="tcg" href="https://thedragonchambergames.com/prestashop/185-riftbound"><div class="card"><svg viewBox="0 0 250 350"><defs><radialGradient id="r" cx=".5" cy=".5" r=".7"><stop offset="0" stop-color="#2f6ee8"/><stop offset=".5" stop-color="#1b1f5e"/><stop offset="1" stop-color="#0b0b24"/></radialGradient></defs><rect width="250" height="350" fill="url(#r)"/><rect x="10" y="10" width="230" height="330" rx="10" fill="none" stroke="#9fd0ff" stroke-width="3"/><g fill="none" stroke="#9fd0ff" stroke-width="2"><path d="M125 55 C190 100 190 250 125 295 C60 250 60 100 125 55Z"/><path d="M125 95 C165 130 165 220 125 255 C85 220 85 130 125 95Z"/></g><path d="M125 55 L112 175 L125 295 L138 175Z" fill="#9fd0ff" opacity=".8"/></svg></div><div class="name">Riftbound</div><span class="go">Ver productos</span></a>
+</div>
+<div class="acc"><h2>Accesorios TCG</h2><div>
+<a href="https://thedragonchambergames.com/prestashop/187-fundas">Fundas</a><a href="https://thedragonchambergames.com/prestashop/188-deck-box">Deck box</a><a href="https://thedragonchambergames.com/prestashop/189-archivadores">Archivadores</a><a href="https://thedragonchambergames.com/prestashop/190-tapetes">Tapetes</a><a href="https://thedragonchambergames.com/prestashop/191-toploaders">Toploaders</a><a href="https://thedragonchambergames.com/prestashop/192-dados">Contadores y tokens</a></div></div>
+</div>
+<script>
+document.querySelectorAll('.tcg').forEach(function(t){var c=t.querySelector('.card');
+t.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+c.style.setProperty('--ry',((x-.5)*24)+'deg');c.style.setProperty('--rx',((.5-y)*24)+'deg');c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%')});
+t.addEventListener('mouseleave',function(){c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')})});
+</script>
+
+</body></html>

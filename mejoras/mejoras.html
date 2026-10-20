@@ -1,0 +1,86 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Mejoras Dragon Chamber</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Poppins:wght@400;500;600&display=swap">
+<style>
+/* Layout: ficha técnica de cuatro mejoras, cada una con su demo viva */
+:root{--bg:#f3f1f8;--fg:#1b1730;--muted:#5d5878;--gold:#8a6a10;--panel:#e4e0f0;--line:#cfc9e2;--chip:#1b1730;--chipfg:#f5d76e;--stage:#d9d3ea;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f0e1a;--fg:#ecebf5;--muted:#a6a2bf;--gold:#e5c04b;--panel:#1a1830;--line:#2e2b4a;--chip:#f5d76e;--chipfg:#1b1730;--stage:#151329;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f0e1a;--fg:#ecebf5;--muted:#a6a2bf;--gold:#e5c04b;--panel:#1a1830;--line:#2e2b4a;--chip:#f5d76e;--chipfg:#1b1730;--stage:#151329;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 Poppins,system-ui,sans-serif;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:36px 64px}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1{font:800 clamp(28px,5vw,46px)/1.1 Cinzel,serif;margin:0 0 8px;text-wrap:balance}
+h2{font:800 24px/1.2 Cinzel,serif;margin:0 0 6px}
+p{margin:0;max-width:62ch} .muted{color:var(--muted)}
+.tag{font:600 12px/1 Poppins;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block}
+.stage{background:var(--stage);border:1px solid var(--line);border-radius:14px;padding:28px 20px;margin-top:18px;overflow:hidden}
+button.btn{font:600 14px Poppins;background:var(--chip);color:var(--chipfg);border:0;border-radius:999px;padding:10px 20px;cursor:pointer}
+button.btn:focus-visible,.tcg:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.file{font:13px ui-monospace,Menlo,monospace;color:var(--muted);margin-top:12px}
+/* paneles */
+.screen{position:relative;height:230px;background:var(--panel);border-radius:10px;display:flex;justify-content:center;align-items:center}
+.shop{width:58%;height:84%;border:2px dashed var(--line);border-radius:8px;display:grid;place-items:center;color:var(--muted);font-size:13px;text-align:center;padding:8px}
+.side{position:absolute;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:6px;align-items:center;width:15%}
+.side.l{left:3%}.side.r{right:3%} .side svg{width:100%;max-width:62px;height:auto;filter:drop-shadow(0 4px 5px rgba(0,0,0,.35));transition:transform .25s}
+.side svg:hover{transform:translateY(-5px) scale(1.07)}
+/* tcg */
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:22px;perspective:900px;justify-items:center}
+.tcg{display:flex;flex-direction:column;align-items:center;gap:10px;text-decoration:none;color:inherit}
+.card3d{position:relative;width:min(100%,140px);aspect-ratio:5/7;border-radius:10px;overflow:hidden;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .2s,box-shadow .2s;box-shadow:0 10px 20px rgba(0,0,0,.35)}
+.card3d svg{display:block;width:100%;height:100%}
+.card3d:after{content:"";position:absolute;inset:0;opacity:0;transition:opacity .2s;pointer-events:none;mix-blend-mode:overlay;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.6),transparent 45%),linear-gradient(115deg,transparent 30%,rgba(255,220,120,.3) 45%,rgba(120,200,255,.3) 55%,transparent 70%)}
+.tcg:hover .card3d:after{opacity:1} .nm{font:600 13px Poppins;text-align:center}
+/* slider */
+.hero{position:relative;height:150px;border-radius:10px;background:linear-gradient(120deg,var(--h1,#1d2c4d),var(--h2,#3b5a96));display:grid;place-items:center;color:#fff;font:800 clamp(18px,4vw,28px) Cinzel,serif;text-align:center;padding:0 12px;transition:background .6s}
+.dots{position:absolute;left:0;right:0;bottom:6px;display:flex;justify-content:center;align-items:flex-end;height:70px}
+.dot{position:relative;width:34px;height:48px;margin-left:-14px;border-radius:6px;opacity:.75;border:2px solid #c9a227;box-sizing:border-box;cursor:pointer;padding:0;background:linear-gradient(145deg,var(--c1),var(--c2));box-shadow:0 4px 8px rgba(0,0,0,.45);transition:transform .35s cubic-bezier(.2,.9,.3,1.3),box-shadow .35s,opacity .35s,filter .35s}
+.dot:first-child{margin-left:0} .dot:nth-child(odd){transform:rotate(-4deg)} .dot:nth-child(even){transform:rotate(3deg) translateY(2px)}
+.dot:before{content:"";position:absolute;inset:4px;border:1px solid rgba(245,215,110,.7);border-radius:3px}
+.dot:after{content:"✦";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#f5d76e;font-size:16px}
+.dot:hover{transform:translateY(-8px) rotate(0);opacity:1;z-index:5}
+.dot.on{opacity:1;transform:translateY(-16px) rotate(0) scale(1.12);z-index:10;filter:brightness(1.25);border-color:#f5d76e;animation:glow 1.8s ease-in-out infinite alternate}
+@keyframes glow{from{box-shadow:0 10px 18px rgba(0,0,0,.55),0 0 8px 1px rgba(245,215,110,.5)}to{box-shadow:0 10px 18px rgba(0,0,0,.55),0 0 18px 5px rgba(245,215,110,.95)}}
+.steps{margin:14px 0 0;padding-left:20px;max-width:62ch} .steps li{margin-bottom:4px}
+@media (prefers-reduced-motion:reduce){.dot,.dot.on,.card3d{transition:none;animation:none}}
+</style>
+<div class="wrap">
+<header><span class="tag">The Dragon Chamber · PrestaShop</span><h1>Mejoras visuales de la tienda</h1>
+<p class="muted">Cuatro utilidades pensadas para el tema actual. Aquí puedes probar cada una antes de instalarla. Las ilustraciones son originales y se pueden cambiar por fotos de productos propios.</p></header>
+
+<section><span class="tag">1 · Modo oscuro</span><h2>Botón luna / sol</h2>
+<p>Un botón fijo abajo a la izquierda. Recuerda la elección del visitante y, si no ha elegido, usa el modo de su dispositivo.</p>
+<div class="stage"><button class="btn" id="tg" type="button">Cambiar a modo oscuro</button></div>
+<div class="file">dragonchamber.css + dragonchamber.js</div></section>
+
+<section><span class="tag">2 · Paneles laterales</span><h2>Accesos a cada sección en los márgenes</h2>
+<p>En pantallas de 1780 px o más aparecen a cada lado un dorso de carta, un guerrero y una caja de juego. Cada uno enlaza a su categoría. En móvil y portátil no se muestran.</p>
+<div class="stage"><div class="screen"><div class="side l"><svg viewBox="0 0 120 170" aria-hidden="true"><rect x="3" y="3" width="114" height="164" rx="10" fill="#2a1a4a" stroke="#c9a227" stroke-width="3"/><rect x="12" y="12" width="96" height="146" rx="6" fill="none" stroke="#c9a227" stroke-width="1.5"/><circle cx="60" cy="85" r="34" fill="none" stroke="#c9a227" stroke-width="2"/><polygon points="60,55 68,80 94,80 73,95 81,120 60,105 39,120 47,95 26,80 52,80" fill="#c9a227" opacity=".85"/><circle cx="60" cy="85" r="8" fill="#2a1a4a"/></svg><svg viewBox="0 0 120 190" aria-hidden="true"><ellipse cx="60" cy="180" rx="38" ry="7" fill="#333"/><rect x="30" y="165" width="60" height="12" rx="3" fill="#555"/><rect x="42" y="115" width="14" height="52" fill="#3b4f7a"/><rect x="64" y="115" width="14" height="52" fill="#3b4f7a"/><path d="M34 62 Q60 50 86 62 L92 118 L28 118Z" fill="#4a64a0" stroke="#22304f" stroke-width="2"/><rect x="50" y="76" width="20" height="26" rx="3" fill="#c9a227"/><circle cx="26" cy="64" r="16" fill="#5a76b8" stroke="#22304f" stroke-width="2"/><circle cx="94" cy="64" r="16" fill="#5a76b8" stroke="#22304f" stroke-width="2"/><circle cx="60" cy="38" r="20" fill="#4a64a0" stroke="#22304f" stroke-width="2"/><rect x="46" y="34" width="28" height="7" rx="2" fill="#e04040"/><rect x="100" y="30" width="6" height="100" fill="#999"/><polygon points="97,30 109,30 103,10" fill="#ddd"/></svg><svg viewBox="0 0 150 130" aria-hidden="true"><polygon points="10,35 90,35 90,120 10,120" fill="#b33a2a" stroke="#4a1710" stroke-width="2"/><polygon points="90,35 140,20 140,105 90,120" fill="#8a2a1d" stroke="#4a1710" stroke-width="2"/><polygon points="10,35 60,20 140,20 90,35" fill="#d65a45" stroke="#4a1710" stroke-width="2"/><circle cx="50" cy="70" r="18" fill="#f5d76e" stroke="#4a1710" stroke-width="2"/><rect x="42" y="64" width="16" height="16" fill="#b33a2a"/><circle cx="50" cy="72" r="3" fill="#f5d76e"/><rect x="22" y="98" width="56" height="8" rx="2" fill="#f2e3b8"/></svg></div><div class="shop">Contenido de la tienda<br>(pantalla ancha)</div><div class="side r"><svg viewBox="0 0 150 130" aria-hidden="true"><polygon points="10,35 90,35 90,120 10,120" fill="#b33a2a" stroke="#4a1710" stroke-width="2"/><polygon points="90,35 140,20 140,105 90,120" fill="#8a2a1d" stroke="#4a1710" stroke-width="2"/><polygon points="10,35 60,20 140,20 90,35" fill="#d65a45" stroke="#4a1710" stroke-width="2"/><circle cx="50" cy="70" r="18" fill="#f5d76e" stroke="#4a1710" stroke-width="2"/><rect x="42" y="64" width="16" height="16" fill="#b33a2a"/><circle cx="50" cy="72" r="3" fill="#f5d76e"/><rect x="22" y="98" width="56" height="8" rx="2" fill="#f2e3b8"/></svg><svg viewBox="0 0 120 190" aria-hidden="true"><ellipse cx="60" cy="180" rx="38" ry="7" fill="#333"/><rect x="30" y="165" width="60" height="12" rx="3" fill="#555"/><rect x="42" y="115" width="14" height="52" fill="#3b4f7a"/><rect x="64" y="115" width="14" height="52" fill="#3b4f7a"/><path d="M34 62 Q60 50 86 62 L92 118 L28 118Z" fill="#4a64a0" stroke="#22304f" stroke-width="2"/><rect x="50" y="76" width="20" height="26" rx="3" fill="#c9a227"/><circle cx="26" cy="64" r="16" fill="#5a76b8" stroke="#22304f" stroke-width="2"/><circle cx="94" cy="64" r="16" fill="#5a76b8" stroke="#22304f" stroke-width="2"/><circle cx="60" cy="38" r="20" fill="#4a64a0" stroke="#22304f" stroke-width="2"/><rect x="46" y="34" width="28" height="7" rx="2" fill="#e04040"/><rect x="100" y="30" width="6" height="100" fill="#999"/><polygon points="97,30 109,30 103,10" fill="#ddd"/></svg><svg viewBox="0 0 120 170" aria-hidden="true"><rect x="3" y="3" width="114" height="164" rx="10" fill="#2a1a4a" stroke="#c9a227" stroke-width="3"/><rect x="12" y="12" width="96" height="146" rx="6" fill="none" stroke="#c9a227" stroke-width="1.5"/><circle cx="60" cy="85" r="34" fill="none" stroke="#c9a227" stroke-width="2"/><polygon points="60,55 68,80 94,80 73,95 81,120 60,105 39,120 47,95 26,80 52,80" fill="#c9a227" opacity=".85"/><circle cx="60" cy="85" r="8" fill="#2a1a4a"/></svg></div></div></div>
+<div class="file">dragonchamber.css + dragonchamber.js</div></section>
+
+<section><span class="tag">3 · Juegos de cartas</span><h2>Dorsos animados en las subcategorías</h2>
+<p>Sustituyen a las imágenes de Magic, Yu-Gi-Oh!, One Piece y Riftbound. Al pasar el ratón, la carta se inclina y brilla.</p>
+<div class="stage"><div class="row"><a class="tcg" href="#"><div class="card3d"><svg viewBox="0 0 250 350"><rect width="250" height="350" fill="#2b1650"/><rect x="10" y="10" width="230" height="330" rx="10" fill="none" stroke="#e5c04b" stroke-width="3"/><circle cx="125" cy="175" r="88" fill="none" stroke="#e5c04b" stroke-width="2"/><g stroke="#e5c04b" stroke-width="2" fill="none"><polygon points="125,95 200,150 172,238 78,238 50,150"/><polygon points="125,255 50,200 78,112 172,112 200,200"/></g><g><circle cx="125" cy="88" r="12" fill="#f4eecf"/><circle cx="205" cy="146" r="12" fill="#3f8fd8"/><circle cx="175" cy="240" r="12" fill="#222"/><circle cx="75" cy="240" r="12" fill="#d8453b"/><circle cx="45" cy="146" r="12" fill="#3aa757"/></g><circle cx="125" cy="175" r="16" fill="#e5c04b"/></svg></div><span class="nm">Magic: The Gathering</span></a><a class="tcg" href="#"><div class="card3d"><svg viewBox="0 0 250 350"><defs><radialGradient id="y" cx=".5" cy=".5" r=".6"><stop offset="0" stop-color="#7a3a14"/><stop offset="1" stop-color="#2a1208"/></radialGradient></defs><rect width="250" height="350" fill="url(#y)"/><rect x="10" y="10" width="230" height="330" rx="10" fill="none" stroke="#f0c36a" stroke-width="3"/><g fill="none" stroke="#f0c36a" stroke-width="2.5"><path d="M125 70 L200 230 L50 230Z"/><path d="M125 280 L50 120 L200 120Z"/><circle cx="125" cy="175" r="26"/></g><circle cx="125" cy="175" r="10" fill="#f0c36a"/></svg></div><span class="nm">Yu-Gi-Oh!</span></a><a class="tcg" href="#"><div class="card3d"><svg viewBox="0 0 250 350"><rect width="250" height="350" fill="#0e2a4d"/><g fill="none" stroke="#6cc3e8" stroke-width="2.5" opacity=".7"><path d="M0 250 q31 -24 62 0 t62 0 t62 0 t64 0"/><path d="M0 280 q31 -24 62 0 t62 0 t62 0 t64 0"/><path d="M0 310 q31 -24 62 0 t62 0 t62 0 t64 0"/></g><rect x="10" y="10" width="230" height="330" rx="10" fill="none" stroke="#f3d27a" stroke-width="3"/><circle cx="125" cy="140" r="64" fill="none" stroke="#f3d27a" stroke-width="3"/><path d="M125 76 L137 140 L125 204 L113 140Z" fill="#d94a3a"/><path d="M61 140 L125 128 L189 140 L125 152Z" fill="#f3d27a"/><circle cx="125" cy="140" r="7" fill="#0e2a4d"/></svg></div><span class="nm">One Piece Card Game</span></a><a class="tcg" href="#"><div class="card3d"><svg viewBox="0 0 250 350"><defs><radialGradient id="r" cx=".5" cy=".5" r=".7"><stop offset="0" stop-color="#2f6ee8"/><stop offset=".5" stop-color="#1b1f5e"/><stop offset="1" stop-color="#0b0b24"/></radialGradient></defs><rect width="250" height="350" fill="url(#r)"/><rect x="10" y="10" width="230" height="330" rx="10" fill="none" stroke="#9fd0ff" stroke-width="3"/><g fill="none" stroke="#9fd0ff" stroke-width="2"><path d="M125 55 C190 100 190 250 125 295 C60 250 60 100 125 55Z"/><path d="M125 95 C165 130 165 220 125 255 C85 220 85 130 125 95Z"/></g><path d="M125 55 L112 175 L125 295 L138 175Z" fill="#9fd0ff" opacity=".8"/></svg></div><span class="nm">Riftbound</span></a></div></div>
+<div class="file">dragonchamber-tcg.js · tcg.html (página con dorsos grandes)</div></section>
+
+<section><span class="tag">4 · Deslizante de la portada</span><h2>Los puntos pasan a ser cartas</h2>
+<p>Las cartas se solapan como una mano. La de la diapositiva activa sube y se ilumina. Pulsa una para cambiar de diapositiva.</p>
+<div class="stage"><div class="hero" id="hero"><span id="ht">Warhammer 40.000</span><div class="dots" id="dots"></div></div></div>
+<div class="file">dragonchamber-slider.css</div></section>
+
+<section><span class="tag">Instalación</span><h2>Cómo ponerlo en la tienda</h2>
+<ol class="steps"><li>Haz copia de seguridad del tema.</li><li>Sube los ficheros a la carpeta de CSS y JS del tema, o pega su contenido en custom.css y custom.js.</li><li>Enlázalos desde el tema o desde un módulo de CSS/JS personalizado.</li><li>Borra la caché en Parámetros avanzados &gt; Rendimiento.</li></ol>
+<p class="muted" style="margin-top:12px">Los ficheros están en la carpeta mejoras del proyecto CHAMBER. El modo oscuro solo se ha afinado con la portada y las cartas; conviene revisar ficha de producto, carrito y pago.</p></section>
+</div>
+<script>
+var root=document.documentElement,tg=document.getElementById('tg');
+function lab(){var d=root.dataset.theme==='dark'||(!root.dataset.theme&&matchMedia('(prefers-color-scheme: dark)').matches);tg.textContent=d?'Cambiar a modo claro':'Cambiar a modo oscuro';return d}
+tg.onclick=function(){root.dataset.theme=lab()?'light':'dark';lab()};lab();
+document.querySelectorAll('.tcg').forEach(function(t){var c=t.querySelector('.card3d');t.addEventListener('click',function(e){e.preventDefault()});
+t.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.setProperty('--ry',((x-.5)*24)+'deg');c.style.setProperty('--rx',((.5-y)*24)+'deg');c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%')});
+t.addEventListener('mouseleave',function(){c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')})});
+var S=[['Warhammer 40.000','#1d2c4d','#3b5a96'],['Pinturas y modelismo','#6b2a14','#c8661f'],['Marvel y Magic','#2a1a4a','#6a3aa8']],i=0,dots=document.getElementById('dots'),hero=document.getElementById('hero');
+S.forEach(function(s,k){var b=document.createElement('button');b.className='dot';b.type='button';b.setAttribute('aria-label','Diapositiva '+(k+1));b.style.setProperty('--c1',s[1]);b.style.setProperty('--c2',s[2]);b.onclick=function(){go(k);clearInterval(tm);tm=setInterval(nx,3500)};dots.appendChild(b)});
+function go(k){i=k;var s=S[k];hero.style.setProperty('--h1',s[1]);hero.style.setProperty('--h2',s[2]);document.getElementById('ht').textContent=s[0];dots.querySelectorAll('.dot').forEach(function(d,j){d.classList.toggle('on',j===k)})}
+function nx(){go((i+1)%S.length)};go(0);var tm=setInterval(nx,3500);
+</script>
+</body></html>

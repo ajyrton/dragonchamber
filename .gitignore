@@ -1,0 +1,12 @@
+# Datos sensibles de PrestaShop (por si algún día se añade el clon completo)
+parameters.php
+*.sql
+*.sql.gz
+.env
+
+# Sistema / editores
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+__pycache__/
