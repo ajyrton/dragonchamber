@@ -3,6 +3,8 @@
 Copia estática de la tienda [thedragonchambergames.com/prestashop](https://thedragonchambergames.com/prestashop/)
 para probar mejoras visuales poco a poco antes de pasarlas a la web real.
 
+**Web publicada:** <https://ajyrton.github.io/dragonchamber/>
+
 ## Estructura
 
 | Carpeta | Qué hay |
