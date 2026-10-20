@@ -1,0 +1,2261 @@
+{
+ "url": "http://localhost:8080/index.html",
+ "at": "2026-10-20T13:30:44.013Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.97,
+    0.48,
+    0.41,
+    0.42,
+    0.58,
+    0.72,
+    0.42,
+    0.93,
+    0.79
+   ],
+   "motion": {
+    "elements": 64,
+    "css": 5,
+    "transitions": 59,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 7982,
+     "screens": 8.9,
+     "words": 699,
+     "img": 13,
+     "video": 0,
+     "canvas": 0,
+     "svg": 11,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 12,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "sala-pintura.jpg",
+      "partida-cartas.jpg",
+      "magic-marvel.jpg",
+      "tienda-mesas.jpg",
+      "tienda-1.jpg",
+      "tienda-4.jpg",
+      "tienda-3.jpg",
+      "tienda-6.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "The Dragon Chamber",
+     "words": 3,
+     "chars": 18,
+     "lines": 1,
+     "size": 52,
+     "vw": 3.6,
+     "font": "Switzer",
+     "weight": 600,
+     "tracking": -0.04,
+     "leading": 0.95,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.33,
+     "top": 67,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "The Dragon Chamber",
+     "words": 3,
+     "lines": 1,
+     "size": 52,
+     "font": "Switzer"
+    },
+    "headings": [
+     {
+      "text": "The Dragon Chamber",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.33,
+      "top": 67,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "La tienda en seis mazos",
+      "words": 5,
+      "chars": 23,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.46,
+      "top": 1197,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Comprar aquí",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.35,
+      "top": 4506,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "De tu pedido a tu mesa",
+      "words": 6,
+      "chars": 22,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 5514,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Nos vemos en la mesa",
+      "words": 5,
+      "chars": 20,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.37,
+      "top": 7501,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The Dragon Chamber",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 135.4,
+      "vw": 9.4,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.05,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 7836,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 2,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Switzer",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      15,
+      19,
+      20,
+      26,
+      52,
+      135
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Switzer",
+      "size": 15,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": -0.006,
+      "contrast": 9.3
+     },
+     "measureChars": 53,
+     "max": {
+      "size": 135.4,
+      "vw": 9.4,
+      "font": "Switzer",
+      "text": "The Dragon Chamber"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.06,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#04080f",
+     "bodyBgHsl": {
+      "h": 218,
+      "s": 0.58,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#131c2a",
+       "top": 33,
+       "hsl": {
+        "h": 217,
+        "s": 0.38,
+        "l": 0.12
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#e6edf5",
+       "share": 0.77
+      },
+      {
+       "color": "#b3c0d0",
+       "share": 0.13
+      },
+      {
+       "color": "#f2f5f8",
+       "share": 0.05
+      },
+      {
+       "color": "#e9eef3",
+       "share": 0.02
+      },
+      {
+       "color": "#f5d76e",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#04080f",
+      "hsl": {
+       "h": 218,
+       "s": 0.58,
+       "l": 0.04
+      },
+      "fg": "#e6edf5"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 36,
+     "inHero": 1,
+     "radius": "pill",
+     "height": 37,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Ver las secciones"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 12,
+     "boxRadius": 14,
+     "squareMedia": 3,
+     "roundedMedia": 9,
+     "mediaRadius": 14,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 0.14
+     }
+    ],
+    "nav": {
+     "links": 0,
+     "fixed": false,
+     "height": 900,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "switzer"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 7982,
+    "margins": {
+     "left": 32,
+     "right": 32
+    },
+    "sections": [
+     {
+      "sel": "header#inicio.hero",
+      "tag": "header",
+      "top": 0,
+      "height": 900,
+      "words": 79,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "The Dragon Chamber",
+       "size": 52,
+       "tag": "h1"
+      },
+      "left": 428,
+      "right": 428,
+      "textLeft": 428,
+      "textRight": 428,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#secciones.deck.is-pinned",
+      "tag": "section",
+      "top": 1073,
+      "height": 2160,
+      "words": 97,
+      "media": 0,
+      "middle": 86,
+      "heading": {
+       "text": "La tienda en seis mazos",
+       "size": 52,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 179,
+      "textLeft": 32,
+      "textRight": 179,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "section#cartas.tcg",
+      "tag": "section",
+      "top": 3406,
+      "height": 864,
+      "words": 184,
+      "media": 7,
+      "middle": 15,
+      "heading": {
+       "text": "Juegos de cartas.",
+       "size": 26,
+       "tag": "h2"
+      },
+      "left": 27,
+      "right": 32,
+      "textLeft": 45,
+      "textRight": 64,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#comprar.buy",
+      "tag": "section",
+      "top": 4442,
+      "height": 898,
+      "words": 88,
+      "media": 1,
+      "middle": 190,
+      "heading": {
+       "text": "Comprar aquí",
+       "size": 52,
+       "tag": "h2"
+      },
+      "left": 164,
+      "right": 32,
+      "textLeft": 164,
+      "textRight": 366,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#pedido.row",
+      "tag": "section",
+      "top": 5514,
+      "height": 702,
+      "words": 120,
+      "media": 7,
+      "middle": 464,
+      "heading": {
+       "text": "Primero, lo eliges",
+       "size": 19,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 0,
+      "textLeft": 32,
+      "textRight": -738,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#visita.visit",
+      "tag": "section",
+      "top": 6389,
+      "height": 900,
+      "words": 50,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Ven a la tienda",
+       "size": 26,
+       "tag": "h2"
+      },
+      "left": 1040,
+      "right": 64,
+      "textLeft": 1040,
+      "textRight": 64,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "footer.back",
+      "tag": "footer",
+      "top": 7461,
+      "height": 521,
+      "words": 74,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "The Dragon Chamber",
+       "size": 135,
+       "tag": "p"
+      },
+      "left": 111,
+      "right": 111,
+      "textLeft": 111,
+      "textRight": 111,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "The Dragon Chamber",
+      "size": 52,
+      "top": 67,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 164,
+      "n": 3
+     },
+     {
+      "x": 291,
+      "n": 3
+     },
+     {
+      "x": 470,
+      "n": 3
+     },
+     {
+      "x": 32,
+      "n": 2
+     },
+     {
+      "x": 64,
+      "n": 2
+     },
+     {
+      "x": 705,
+      "n": 2
+     },
+     {
+      "x": 1040,
+      "n": 2
+     },
+     {
+      "x": 744,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 18,
+    "bodySize": 15,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    1,
+    0.71,
+    0.83,
+    0.79,
+    0.62,
+    0.87,
+    0.63,
+    1,
+    0.98
+   ],
+   "motion": {
+    "elements": 58,
+    "css": 5,
+    "transitions": 53,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 8602,
+     "screens": 8.4,
+     "words": 824,
+     "img": 13,
+     "video": 0,
+     "canvas": 0,
+     "svg": 11,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 10,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "sala-pintura.jpg",
+      "partida-cartas.jpg",
+      "magic-marvel.jpg",
+      "tienda-mesas.jpg",
+      "tienda-1.jpg",
+      "tienda-4.jpg",
+      "tienda-3.jpg",
+      "tienda-6.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "The Dragon Chamber",
+     "words": 3,
+     "chars": 18,
+     "lines": 1,
+     "size": 42.4,
+     "vw": 5.5,
+     "font": "Switzer",
+     "weight": 600,
+     "tracking": -0.04,
+     "leading": 0.95,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.67,
+     "top": 138,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "The Dragon Chamber",
+     "words": 3,
+     "lines": 1,
+     "size": 42.4,
+     "font": "Switzer"
+    },
+    "headings": [
+     {
+      "text": "The Dragon Chamber",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 42.4,
+      "vw": 5.5,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 138,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "La tienda en seis mazos",
+      "words": 5,
+      "chars": 23,
+      "lines": 2,
+      "size": 76.8,
+      "vw": 10,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 1120,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Comprar aquí",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 42.4,
+      "vw": 5.5,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.7,
+      "top": 4272,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "De tu pedido a tu mesa",
+      "words": 6,
+      "chars": 22,
+      "lines": 1,
+      "size": 42.4,
+      "vw": 5.5,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.52,
+      "top": 6158,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Nos vemos en la mesa",
+      "words": 5,
+      "chars": 20,
+      "lines": 2,
+      "size": 42.4,
+      "vw": 5.5,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 8103,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The Dragon Chamber",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 72.2,
+      "vw": 9.4,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.05,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 8513,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 2,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Switzer",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      18,
+      20,
+      24,
+      42,
+      72,
+      77
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Switzer",
+      "size": 17.9,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": -0.005,
+      "contrast": 14.5
+     },
+     "measureChars": 60,
+     "max": {
+      "size": 76.8,
+      "vw": 10,
+      "font": "Switzer",
+      "text": "La tienda en seis mazos"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#04080f",
+     "bodyBgHsl": {
+      "h": 218,
+      "s": 0.58,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#131c2a",
+       "top": 112,
+       "hsl": {
+        "h": 217,
+        "s": 0.38,
+        "l": 0.12
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#e6edf5",
+       "share": 0.81
+      },
+      {
+       "color": "#b3c0d0",
+       "share": 0.11
+      },
+      {
+       "color": "#f2f5f8",
+       "share": 0.04
+      },
+      {
+       "color": "#e9eef3",
+       "share": 0.01
+      },
+      {
+       "color": "#f5d76e",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#04080f",
+      "hsl": {
+       "h": 218,
+       "s": 0.58,
+       "l": 0.04
+      },
+      "fg": "#e6edf5"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 36,
+     "inHero": 1,
+     "radius": "pill",
+     "height": 36,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Ver las secciones"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 10,
+     "boxRadius": 14,
+     "squareMedia": 3,
+     "roundedMedia": 9,
+     "mediaRadius": 14,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 0.29
+     }
+    ],
+    "nav": {
+     "links": 0,
+     "fixed": false,
+     "height": 1024,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "switzer"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 8602,
+    "margins": {
+     "left": 17,
+     "right": 23
+    },
+    "sections": [
+     {
+      "sel": "header#inicio.hero",
+      "tag": "header",
+      "top": 0,
+      "height": 1024,
+      "words": 79,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "The Dragon Chamber",
+       "size": 42,
+       "tag": "h1"
+      },
+      "left": 105,
+      "right": 105,
+      "textLeft": 105,
+      "textRight": 105,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#secciones.deck",
+      "tag": "section",
+      "top": 1024,
+      "height": 2009,
+      "words": 226,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "La tienda en seis mazos",
+       "size": 77,
+       "tag": "h2"
+      },
+      "left": 17,
+      "right": 37,
+      "textLeft": 17,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#cartas.tcg",
+      "tag": "section",
+      "top": 3129,
+      "height": 983,
+      "words": 184,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Juegos de cartas.",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 11,
+      "right": 0,
+      "textLeft": 28,
+      "textRight": -50,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.sheet.is-in",
+      "tag": "div",
+      "top": 4208,
+      "height": 864,
+      "words": 81,
+      "media": 0,
+      "middle": 7,
+      "heading": {
+       "text": "Comprar aquí",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 115,
+      "right": 115,
+      "textLeft": 115,
+      "textRight": 115,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.buy__pic.is-in",
+      "tag": "figure",
+      "top": 5103,
+      "height": 951,
+      "words": 7,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 17,
+      "right": 17,
+      "textLeft": 17,
+      "textRight": 545,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#pedido.row",
+      "tag": "section",
+      "top": 6151,
+      "height": 697,
+      "words": 126,
+      "media": 7,
+      "middle": 1121,
+      "heading": {
+       "text": "De tu pedido a tu mesa",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 17,
+      "right": 0,
+      "textLeft": 17,
+      "textRight": -1383,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#visita.visit",
+      "tag": "section",
+      "top": 6943,
+      "height": 1024,
+      "words": 50,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Ven a la tienda",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 383,
+      "right": 49,
+      "textLeft": 383,
+      "textRight": 49,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.back",
+      "tag": "footer",
+      "top": 8063,
+      "height": 539,
+      "words": 74,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "The Dragon Chamber",
+       "size": 72,
+       "tag": "p"
+      },
+      "left": 48,
+      "right": 45,
+      "textLeft": 48,
+      "textRight": 59,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "The Dragon Chamber",
+      "size": 42,
+      "top": 138,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 37,
+      "n": 12
+     },
+     {
+      "x": 115,
+      "n": 5
+     },
+     {
+      "x": 17,
+      "n": 3
+     },
+     {
+      "x": 170,
+      "n": 3
+     },
+     {
+      "x": 383,
+      "n": 2
+     },
+     {
+      "x": 126,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 26,
+    "bodySize": 18,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    0.99,
+    0.66,
+    0.88,
+    0.74,
+    0.76,
+    0.92,
+    0.63,
+    0.83,
+    0.88,
+    0.81
+   ],
+   "motion": {
+    "elements": 57,
+    "css": 5,
+    "transitions": 52,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 8240,
+     "screens": 9.8,
+     "words": 822,
+     "img": 13,
+     "video": 0,
+     "canvas": 0,
+     "svg": 11,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 9,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "sala-pintura.jpg",
+      "partida-cartas.jpg",
+      "magic-marvel.jpg",
+      "tienda-mesas.jpg",
+      "tienda-1.jpg",
+      "tienda-4.jpg",
+      "tienda-3.jpg",
+      "tienda-6.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 2,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "The Dragon Chamber",
+     "words": 3,
+     "chars": 18,
+     "lines": 2,
+     "size": 35.1,
+     "vw": 9,
+     "font": "Switzer",
+     "weight": 600,
+     "tracking": -0.04,
+     "leading": 0.95,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.77,
+     "top": 83,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "The Dragon Chamber",
+     "words": 3,
+     "lines": 2,
+     "size": 35.1,
+     "font": "Switzer"
+    },
+    "headings": [
+     {
+      "text": "The Dragon Chamber",
+      "words": 3,
+      "chars": 18,
+      "lines": 2,
+      "size": 35.1,
+      "vw": 9,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 83,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "2 h",
+      "words": 2,
+      "chars": 3,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Switzer",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.07,
+      "top": 730,
+      "tag": "b",
+      "kind": "statement"
+     },
+     {
+      "text": "La tienda en seis mazos",
+      "words": 5,
+      "chars": 23,
+      "lines": 2,
+      "size": 39,
+      "vw": 10,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 940,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "El catálogo, ordenado por lo que vienes a hacer: jugar, coleccionar, montar un ejército, pintarlo o leer.",
+      "words": 17,
+      "chars": 105,
+      "lines": 3,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.3,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1038,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Juegos de mesa",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 1188,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Cartas coleccionables",
+      "words": 2,
+      "chars": 21,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 1521,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Warhammer y wargames",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 1828,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Pintura y modelismo",
+      "words": 3,
+      "chars": 19,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 2152,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Rol y libros",
+      "words": 3,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 2520,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Accesorios de juego",
+      "words": 3,
+      "chars": 19,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 2845,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Juegos de cartas.",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.81,
+      "top": 3356,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Magic, Yu-Gi-Oh!, One Piece y Riftbound: sobres, cajas, mazos y preventas de cada colección.",
+      "words": 14,
+      "chars": 92,
+      "lines": 3,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.81,
+      "top": 3397,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Y en la tienda se juega: clasificatorios, presentaciones y torneos de cada juego.",
+      "words": 13,
+      "chars": 81,
+      "lines": 3,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.81,
+      "top": 3494,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Comprar aquí",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 4290,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Recibirlo",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 4364,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Pagar",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 4672,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Devolverlo",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 4907,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "De tu pedido a tu mesa",
+      "words": 6,
+      "chars": 22,
+      "lines": 1,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 5686,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Ven a la tienda",
+      "words": 4,
+      "chars": 15,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 6922,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Nos vemos en la mesa",
+      "words": 5,
+      "chars": 20,
+      "lines": 2,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 7448,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The Dragon Chamber",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.05,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 8100,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 21,
+     "maxLines": 3,
+     "over2Lines": 0,
+     "statements": 5,
+     "centered": 3,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Switzer",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      17,
+      22,
+      24,
+      35,
+      36,
+      39,
+      40
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Switzer",
+      "size": 17,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": -0.005,
+      "contrast": 14.5
+     },
+     "measureChars": 38,
+     "max": {
+      "size": 40,
+      "vw": 10.3,
+      "font": "Switzer",
+      "text": "The Dragon Chamber"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#04080f",
+     "bodyBgHsl": {
+      "h": 218,
+      "s": 0.58,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#131c2a",
+       "top": 57,
+       "hsl": {
+        "h": 217,
+        "s": 0.38,
+        "l": 0.12
+       }
+      },
+      {
+       "color": "#1a2535",
+       "top": 1497,
+       "hsl": {
+        "h": 216,
+        "s": 0.34,
+        "l": 0.15
+       }
+      },
+      {
+       "color": "#212e41",
+       "top": 1804,
+       "hsl": {
+        "h": 216,
+        "s": 0.33,
+        "l": 0.19
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#e6edf5",
+       "share": 0.81
+      },
+      {
+       "color": "#b3c0d0",
+       "share": 0.11
+      },
+      {
+       "color": "#f2f5f8",
+       "share": 0.04
+      },
+      {
+       "color": "#e9eef3",
+       "share": 0.01
+      },
+      {
+       "color": "#f5d76e",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#04080f",
+      "hsl": {
+       "h": 218,
+       "s": 0.58,
+       "l": 0.04
+      },
+      "fg": "#e6edf5"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 36,
+     "inHero": 1,
+     "radius": "pill",
+     "height": 35,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Ver las secciones"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 16,
+     "boxRadius": 14,
+     "squareMedia": 3,
+     "roundedMedia": 9,
+     "mediaRadius": 14,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 0.19
+     }
+    ],
+    "nav": {
+     "links": 0,
+     "fixed": false,
+     "height": 844,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "switzer"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 8240,
+    "margins": {
+     "left": 16,
+     "right": 21
+    },
+    "sections": [
+     {
+      "sel": "header#inicio.hero",
+      "tag": "header",
+      "top": 0,
+      "height": 844,
+      "words": 79,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "The Dragon Chamber",
+       "size": 35,
+       "tag": "h1"
+      },
+      "left": 21,
+      "right": 21,
+      "textLeft": 21,
+      "textRight": 21,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#secciones.deck",
+      "tag": "section",
+      "top": 844,
+      "height": 2346,
+      "words": 226,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "La tienda en seis mazos",
+       "size": 39,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 33,
+      "textLeft": 16,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#cartas.tcg",
+      "tag": "section",
+      "top": 3286,
+      "height": 844,
+      "words": 184,
+      "media": 1,
+      "middle": 550,
+      "heading": {
+       "text": "Juegos de cartas.",
+       "size": 22,
+       "tag": "h2"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 19,
+      "textRight": -708,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.sheet.is-in",
+      "tag": "div",
+      "top": 4226,
+      "height": 860,
+      "words": 81,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Comprar aquí",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 36,
+      "right": 36,
+      "textLeft": 36,
+      "textRight": 36,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.buy__pic.is-in",
+      "tag": "figure",
+      "top": 5109,
+      "height": 481,
+      "words": 7,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 173,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#pedido.row",
+      "tag": "section",
+      "top": 5686,
+      "height": 597,
+      "words": 120,
+      "media": 7,
+      "middle": 1407,
+      "heading": {
+       "text": "Primero, lo eliges",
+       "size": 17,
+       "tag": "h3"
+      },
+      "left": 16,
+      "right": 0,
+      "textLeft": 16,
+      "textRight": -1680,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#visita.visit",
+      "tag": "section",
+      "top": 6379,
+      "height": 949,
+      "words": 50,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 48,
+      "right": 48,
+      "textLeft": 48,
+      "textRight": 48,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.back",
+      "tag": "footer",
+      "top": 7424,
+      "height": 816,
+      "words": 74,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Nos vemos en la mesa",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 14,
+      "textLeft": 16,
+      "textRight": 14,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "The Dragon Chamber",
+      "size": 35,
+      "top": 83,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 34,
+      "n": 21
+     },
+     {
+      "x": 16,
+      "n": 3
+     },
+     {
+      "x": 48,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 26,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "body-size",
+   "width": 1440,
+   "message": "Body text is 15px.",
+   "fix": "Body copy 16–20px."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "side-scroll",
+   "width": 1440,
+   "message": "1 row(s) scroll sideways with content past their edge.",
+   "fix": "Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "ragged-edges",
+   "width": 1440,
+   "message": "Left-aligned text starts at 8 different lines (164px, 291px, 470px, 32px, 64px, 705px, 1040px); the three most used hold only 50% of it.",
+   "fix": "Pick two or three anchor lines from the grid and start every heading and paragraph on one of them."
+  },
+  {
+   "level": "WARN",
+   "id": "empty-middle",
+   "width": 768,
+   "message": "1 section(s) have content at both edges and 1121px of nothing between: \"De tu pedido a tu mesa\"",
+   "fix": "Bring the two parts together on the grid, or put the picture or figure of the section in the middle. An empty middle third reads as a hole, the same as an empty half."
+  },
+  {
+   "level": "WARN",
+   "id": "name-only-title",
+   "width": 768,
+   "message": "The h1 is a bare name (\"The Dragon Chamber\") and nothing else on the first screen says what this is.",
+   "fix": "Keep the name if it leads, and give the line under it (18px or more) the plain words: what it is, for whom, where or when. In the study of 97 Sites of the Day, first screens that named nothing lost usability and content points.",
+   "alsoAt": [
+    390
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\inspect\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\inspect\\desktop-page-01.jpg",
+    "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\inspect\\desktop-page-02.jpg",
+    "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\inspect\\desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\inspect\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\inspect\\tablet-page-01.jpg",
+    "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\inspect\\tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\inspect\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\inspect\\mobile-page-01.jpg",
+    "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\inspect\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

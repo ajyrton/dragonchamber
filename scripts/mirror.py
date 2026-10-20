@@ -63,8 +63,9 @@ def es_pagina_copiable(path):
 
 
 def nombre_local(path):
+    # La portada copiada se guarda aparte: site/index.html es la portada rediseñada (hecha a mano)
     if path == "":
-        return "index.html"
+        return "portada-original.html"
     return path.replace("/", "_") + ".html"
 
 
@@ -223,6 +224,8 @@ def reescribir(path, html, copiadas):
         if attr not in ("href", "action"):
             return raw
         q = urllib.parse.urlparse(u).query
+        if not q and dest_path == "":
+            return "index.html"  # el logo y los enlaces de "Inicio" llevan a la portada rediseñada
         if not q and dest_path in copiadas:
             return nombre_local(dest_path)
         return "no-copiada.html?u=" + urllib.parse.quote(dest_path + ("?" + q if q else ""), safe="")
@@ -255,7 +258,7 @@ def main():
             print(f"  {i}/{len(copiadas)}")
     # Mapa de paginas para los scripts de site/dc (p.ej. los enlaces del asistente)
     with open(os.path.join(ROOT, "dc", "paginas.js"), "w", encoding="utf-8") as f:
-        f.write("window.DC_PAGINAS=" + json.dumps({p: nombre_local(p) for p in sorted(copiadas)}, ensure_ascii=False) + ";\n")
+        f.write("window.DC_PAGINAS=" + json.dumps({p: (nombre_local(p) if p else "index.html") for p in sorted(copiadas)}, ensure_ascii=False) + ";\n")
     print(f"Listo: {len(copiadas)} paginas y {len([v for v in _cache.values() if v])} assets en {ROOT}")
 
 

@@ -1,0 +1,2024 @@
+{
+ "url": "http://localhost:8080/index.html",
+ "at": "2026-10-20T13:14:07.488Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.66,
+    0.58,
+    0.64,
+    0.61,
+    0.79,
+    0.55
+   ],
+   "motion": {
+    "elements": 231,
+    "css": 0,
+    "transitions": 219,
+    "scripted": 12,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 6145,
+     "screens": 6.8,
+     "words": 2638,
+     "img": 236,
+     "video": 0,
+     "canvas": 0,
+     "svg": 23,
+     "sections": 27,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 132,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "barniz-satinado-18-ml.webp",
+      "mascara-liquida-18-ml.webp",
+      "diluyente-18-ml.webp",
+      "base-mate-18-ml.webp",
+      "medium-veladuras-18-ml.webp",
+      "masilla-plastica-18-ml.webp",
+      "medium-brillante-18-ml.webp",
+      "barniz-brillante-18-ml.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "🔥",
+      "⚡",
+      "☀"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Tienda de juegos de mesa",
+     "words": 5,
+     "chars": 24,
+     "lines": 1,
+     "size": 30,
+     "vw": 2.1,
+     "font": "Belleza",
+     "weight": 600,
+     "tracking": 0,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.97,
+     "top": 807,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Tienda de juegos de mesa",
+     "words": 5,
+     "lines": 1,
+     "size": 30,
+     "font": "Belleza"
+    },
+    "headings": [
+     {
+      "text": "Tienda de juegos de mesa",
+      "words": 5,
+      "chars": 24,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Belleza",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.97,
+      "top": 807,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "JUEGOS DESTACADOS",
+      "words": 2,
+      "chars": 17,
+      "lines": 1,
+      "size": 35.2,
+      "vw": 2.4,
+      "font": "Belleza",
+      "weight": 600,
+      "tracking": 0.028,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.97,
+      "top": 1578,
+      "tag": "h4",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 2,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.57,
+       "mono": false
+      },
+      {
+       "family": "Belleza",
+       "share": 0.43,
+       "mono": false
+      },
+      {
+       "family": "sans-serif",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      30,
+      35
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Belleza",
+      "size": 16,
+      "leading": 1.3,
+      "weight": 400,
+      "tracking": 0.031,
+      "contrast": 14.6
+     },
+     "measureChars": 28,
+     "max": {
+      "size": 35.2,
+      "vw": 2.4,
+      "font": "Belleza",
+      "text": "JUEGOS DESTACADOS"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.33,
+     "centerShare": 0.25,
+     "smallText": 26
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0f0e1a",
+     "bodyBgHsl": {
+      "h": 245,
+      "s": 0.3,
+      "l": 0.08
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0f0e1a",
+       "top": 252,
+       "hsl": {
+        "h": 245,
+        "s": 0.3,
+        "l": 0.08
+       }
+      },
+      {
+       "color": "#bbbbbb",
+       "top": 282,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.73
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ecebf5",
+       "share": 0.5
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.29
+      },
+      {
+       "color": "#a6a2bf",
+       "share": 0.15
+      },
+      {
+       "color": "#23f8fd",
+       "share": 0.03
+      },
+      {
+       "color": "#728197",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#00317f",
+      "hsl": {
+       "h": 217,
+       "s": 1,
+       "l": 0.25
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": [
+      {
+       "text": "Ofertas",
+       "ratio": 1,
+       "need": 4.5,
+       "size": 16,
+       "fg": "#111111",
+       "bg": "#0f0e1a"
+      },
+      {
+       "text": "Carrito",
+       "ratio": 1.1,
+       "need": 4.5,
+       "size": 18,
+       "fg": "#08111f",
+       "bg": "#1a1830"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 172,
+     "inHero": 8,
+     "radius": 0,
+     "height": 45,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 164,
+     "heroLabels": [
+      "BUSCAR",
+      "SEGUIR COMPRANDO"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 3,
+     "shadowOverlay": 1,
+     "shadowSamples": [
+      "span.swiper-pagination-bullet → rgba(0, 0, 0, 0.45) 0px 4px 8px 0px",
+      "span.swiper-pagination-bullet.swiper-pagination-bullet-activ → rgba(0, 0, 0, 0.45) 0px 4px 8px 0px",
+      "span.swiper-pagination-bullet → rgba(0, 0, 0, 0.45) 0px 4px 8px 0px"
+     ],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "div.elementor-cart__title 380px",
+      "section.elementor-element.elementor-element-d8a76ba 1440px rule",
+      "section.elementor-element.elementor-element-0685a23 1440px rule"
+     ],
+     "outlinedBoxes": 123,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 132,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "bg-image",
+      "ratio": 0.51
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 222,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "belleza",
+     "poppins",
+     "eicons",
+     "line awesome free",
+     "avanam-icon",
+     "inter"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 6145,
+    "margins": {
+     "left": 20,
+     "right": 21
+    },
+    "sections": [
+     {
+      "sel": "header#header.site-header",
+      "tag": "header",
+      "top": 30,
+      "height": 222,
+      "words": 90,
+      "media": 0,
+      "middle": 3377,
+      "heading": null,
+      "left": 0,
+      "right": 0,
+      "textLeft": -3823,
+      "textRight": -2381,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#wrapper",
+      "tag": "section",
+      "top": 252,
+      "height": 5418,
+      "words": 923,
+      "media": 164,
+      "middle": 10340,
+      "heading": {
+       "text": "JUEGOS DESTACADOS",
+       "size": 35,
+       "tag": "h4"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": -1397,
+      "textRight": -2786,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer#footer.js-footer",
+      "tag": "footer",
+      "top": 5670,
+      "height": 476,
+      "words": 69,
+      "media": 0,
+      "middle": 121,
+      "heading": null,
+      "left": 20,
+      "right": 20,
+      "textLeft": 412,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 3876,
+      "height": 724
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Tienda de juegos de mesa",
+      "size": 30,
+      "top": 807,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 37,
+      "n": 3
+     },
+     {
+      "x": 323,
+      "n": 3
+     },
+     {
+      "x": 609,
+      "n": 3
+     },
+     {
+      "x": 895,
+      "n": 3
+     },
+     {
+      "x": 1181,
+      "n": 3
+     },
+     {
+      "x": 1467,
+      "n": 3
+     },
+     {
+      "x": 1753,
+      "n": 3
+     },
+     {
+      "x": 2039,
+      "n": 3
+     },
+     {
+      "x": 2325,
+      "n": 3
+     },
+     {
+      "x": 2611,
+      "n": 3
+     },
+     {
+      "x": 2897,
+      "n": 3
+     },
+     {
+      "x": 3183,
+      "n": 3
+     }
+    ],
+    "leftBlocks": 53,
+    "bodySize": 14,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.04,
+    "voidBox": {
+     "x": 120,
+     "y": 780,
+     "w": 420,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.59,
+    0.64,
+    0.8,
+    0.74,
+    0.56,
+    0.56
+   ],
+   "motion": {
+    "elements": 186,
+    "css": 0,
+    "transitions": 174,
+    "scripted": 12,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 5995,
+     "screens": 5.9,
+     "words": 2175,
+     "img": 194,
+     "video": 0,
+     "canvas": 0,
+     "svg": 23,
+     "sections": 27,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 131,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "diluyente-18-ml.webp",
+      "base-mate-18-ml.webp",
+      "medium-veladuras-18-ml.webp",
+      "masilla-plastica-18-ml.webp",
+      "medium-brillante-18-ml.webp",
+      "barniz-brillante-18-ml.webp",
+      "barniz-mate-18-ml.webp",
+      "medium-metalico-18-ml.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "🔥",
+      "⚡",
+      "☀"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Tienda de juegos de mesa",
+     "words": 5,
+     "chars": 24,
+     "lines": 1,
+     "size": 28,
+     "vw": 3.6,
+     "font": "Belleza",
+     "weight": 600,
+     "tracking": 0,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.96,
+     "top": 597,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Tienda de juegos de mesa",
+     "words": 5,
+     "lines": 1,
+     "size": 28,
+     "font": "Belleza"
+    },
+    "headings": [
+     {
+      "text": "menuMenu",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 26,
+      "vw": 3.4,
+      "font": "Material Icons",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.04,
+      "top": 105,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Tienda de juegos de mesa",
+      "words": 5,
+      "chars": 24,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Belleza",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 597,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "JUEGOS DESTACADOS",
+      "words": 2,
+      "chars": 17,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Belleza",
+      "weight": 600,
+      "tracking": 0.031,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 1262,
+      "tag": "h4",
+      "kind": "heading"
+     },
+     {
+      "text": "LA COMUNIDAD",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Belleza",
+      "weight": 600,
+      "tracking": 0.031,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 2365,
+      "tag": "h4",
+      "kind": "heading"
+     },
+     {
+      "text": "RESEÑAS",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Belleza",
+      "weight": 600,
+      "tracking": 0.031,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 3241,
+      "tag": "h4",
+      "kind": "heading"
+     },
+     {
+      "text": "OFERTAS SEMANALES",
+      "words": 2,
+      "chars": 17,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Belleza",
+      "weight": 600,
+      "tracking": 0.031,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 3948,
+      "tag": "h4",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.54,
+       "mono": false
+      },
+      {
+       "family": "Belleza",
+       "share": 0.44,
+       "mono": false
+      },
+      {
+       "family": "sans-serif",
+       "share": 0.01,
+       "mono": false
+      },
+      {
+       "family": "Material Icons",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 4,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      21,
+      26,
+      28,
+      32
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Belleza",
+      "size": 16,
+      "leading": 1.3,
+      "weight": 400,
+      "tracking": 0.031,
+      "contrast": 14.6
+     },
+     "measureChars": 25,
+     "max": {
+      "size": 32,
+      "vw": 4.2,
+      "font": "Belleza",
+      "text": "JUEGOS DESTACADOS"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.32,
+     "centerShare": 0.27,
+     "smallText": 27
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0f0e1a",
+     "bodyBgHsl": {
+      "h": 245,
+      "s": 0.3,
+      "l": 0.08
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#1a1830",
+       "top": 0,
+       "hsl": {
+        "h": 245,
+        "s": 0.33,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#0f0e1a",
+       "top": 227,
+       "hsl": {
+        "h": 245,
+        "s": 0.3,
+        "l": 0.08
+       }
+      },
+      {
+       "color": "#bbbbbb",
+       "top": 227,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.73
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ecebf5",
+       "share": 0.52
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.27
+      },
+      {
+       "color": "#a6a2bf",
+       "share": 0.14
+      },
+      {
+       "color": "#23f8fd",
+       "share": 0.03
+      },
+      {
+       "color": "#111111",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#00317f",
+      "hsl": {
+       "h": 217,
+       "s": 1,
+       "l": 0.25
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": [
+      {
+       "text": "Ofertas",
+       "ratio": 1,
+       "need": 4.5,
+       "size": 16,
+       "fg": "#111111",
+       "bg": "#0f0e1a"
+      },
+      {
+       "text": "Carrito",
+       "ratio": 1.1,
+       "need": 4.5,
+       "size": 18,
+       "fg": "#08111f",
+       "bg": "#1a1830"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 139,
+     "inHero": 7,
+     "radius": 0,
+     "height": 40,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 132,
+     "heroLabels": [
+      "SEGUIR COMPRANDO"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 3,
+     "shadowOverlay": 1,
+     "shadowSamples": [
+      "span.swiper-pagination-bullet → rgba(0, 0, 0, 0.45) 0px 4px 8px 0px",
+      "span.swiper-pagination-bullet.swiper-pagination-bullet-activ → rgba(0, 0, 0, 0.45) 0px 4px 8px 0px",
+      "span.swiper-pagination-bullet → rgba(0, 0, 0, 0.45) 0px 4px 8px 0px"
+     ],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 10,
+     "hairlineSamples": [
+      "a 304px",
+      "a 304px",
+      "a 304px",
+      "a 304px",
+      "a 304px"
+     ],
+     "outlinedBoxes": 117,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 135,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "bg-image",
+      "ratio": 0.3
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": false,
+     "height": 196,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "belleza",
+     "poppins",
+     "eicons",
+     "font awesome 5 brands",
+     "line awesome free",
+     "material icons",
+     "avanam-icon",
+     "inter"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 5995,
+    "margins": {
+     "left": 15,
+     "right": 15
+    },
+    "sections": [
+     {
+      "sel": "header#header.site-header",
+      "tag": "header",
+      "top": 30,
+      "height": 196,
+      "words": 1,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "menu",
+       "size": 26,
+       "tag": "i"
+      },
+      "left": 15,
+      "right": 16,
+      "textLeft": 15,
+      "textRight": 727,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#wrapper",
+      "tag": "section",
+      "top": 227,
+      "height": 4748,
+      "words": 757,
+      "media": 132,
+      "middle": 9087,
+      "heading": {
+       "text": "JUEGOS DESTACADOS",
+       "size": 32,
+       "tag": "h4"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": -730,
+      "textRight": -2492,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer#footer.js-footer",
+      "tag": "footer",
+      "top": 4975,
+      "height": 1020,
+      "words": 69,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 15,
+      "right": 126,
+      "textLeft": 15,
+      "textRight": 126,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 3276,
+      "height": 668
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Tienda de juegos de mesa",
+      "size": 28,
+      "top": 597,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "menu",
+      "side": "left",
+      "px": 15
+     },
+     {
+      "text": "JUEGOS DESTACADOS",
+      "side": "left",
+      "px": 15
+     },
+     {
+      "text": "LA COMUNIDAD",
+      "side": "left",
+      "px": 15
+     },
+     {
+      "text": "RESEÑAS",
+      "side": "left",
+      "px": 15
+     },
+     {
+      "text": "OFERTAS SEMANALES",
+      "side": "left",
+      "px": 15
+     },
+     {
+      "text": "Productos",
+      "side": "left",
+      "px": 15
+     },
+     {
+      "text": "Novedades",
+      "side": "left",
+      "px": 15
+     },
+     {
+      "text": "Más vendidos",
+      "side": "left",
+      "px": 15
+     }
+    ],
+    "edges": [
+     {
+      "x": 30,
+      "n": 5
+     },
+     {
+      "x": 285,
+      "n": 3
+     },
+     {
+      "x": 537,
+      "n": 3
+     },
+     {
+      "x": 790,
+      "n": 3
+     },
+     {
+      "x": 1043,
+      "n": 3
+     },
+     {
+      "x": 1295,
+      "n": 3
+     },
+     {
+      "x": 1548,
+      "n": 3
+     },
+     {
+      "x": 1801,
+      "n": 3
+     },
+     {
+      "x": 2053,
+      "n": 3
+     },
+     {
+      "x": 2306,
+      "n": 3
+     },
+     {
+      "x": 2559,
+      "n": 3
+     },
+     {
+      "x": 2811,
+      "n": 3
+     }
+    ],
+    "leftBlocks": 47,
+    "bodySize": 14,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.64,
+    0.59,
+    0.54,
+    0.65,
+    0.71,
+    0.37,
+    0.31
+   ],
+   "motion": {
+    "elements": 169,
+    "css": 0,
+    "transitions": 158,
+    "scripted": 11,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 5564,
+     "screens": 6.6,
+     "words": 1833,
+     "img": 176,
+     "video": 0,
+     "canvas": 0,
+     "svg": 23,
+     "sections": 27,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 120,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "base-mate-18-ml.webp",
+      "medium-veladuras-18-ml.webp",
+      "masilla-plastica-18-ml.webp",
+      "medium-brillante-18-ml.webp",
+      "barniz-brillante-18-ml.webp",
+      "barniz-mate-18-ml.webp",
+      "medium-metalico-18-ml.webp",
+      "barniz-satinado-18-ml.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "☀"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Tienda de juegos de mesa",
+     "words": 5,
+     "chars": 24,
+     "lines": 1,
+     "size": 26,
+     "vw": 6.7,
+     "font": "Belleza",
+     "weight": 600,
+     "tracking": 0,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 450,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Tienda de juegos de mesa",
+     "words": 5,
+     "lines": 1,
+     "size": 26,
+     "font": "Belleza"
+    },
+    "headings": [
+     {
+      "text": "menuMenu",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Material Icons",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.07,
+      "top": 73,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Tienda de juegos de mesa",
+      "words": 5,
+      "chars": 24,
+      "lines": 1,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Belleza",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 450,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "JUEGOS DESTACADOS",
+      "words": 2,
+      "chars": 17,
+      "lines": 1,
+      "size": 27.2,
+      "vw": 7,
+      "font": "Belleza",
+      "weight": 600,
+      "tracking": 0.037,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1095,
+      "tag": "h4",
+      "kind": "heading"
+     },
+     {
+      "text": "LA COMUNIDAD",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 27.2,
+      "vw": 7,
+      "font": "Belleza",
+      "weight": 600,
+      "tracking": 0.037,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2326,
+      "tag": "h4",
+      "kind": "heading"
+     },
+     {
+      "text": "RESEÑAS",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 27.2,
+      "vw": 7,
+      "font": "Belleza",
+      "weight": 600,
+      "tracking": 0.037,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2913,
+      "tag": "h4",
+      "kind": "heading"
+     },
+     {
+      "text": "OFERTAS SEMANALES",
+      "words": 2,
+      "chars": 17,
+      "lines": 1,
+      "size": 27.2,
+      "vw": 7,
+      "font": "Belleza",
+      "weight": 600,
+      "tracking": 0.037,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3700,
+      "tag": "h4",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.53,
+       "mono": false
+      },
+      {
+       "family": "Belleza",
+       "share": 0.45,
+       "mono": false
+      },
+      {
+       "family": "sans-serif",
+       "share": 0.01,
+       "mono": false
+      },
+      {
+       "family": "Material Icons",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 4,
+     "sizes": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      19,
+      26,
+      27
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Belleza",
+      "size": 14,
+      "leading": 1.3,
+      "weight": 400,
+      "tracking": 0.036,
+      "contrast": 14.6
+     },
+     "measureChars": 21,
+     "max": {
+      "size": 27.2,
+      "vw": 7,
+      "font": "Belleza",
+      "text": "JUEGOS DESTACADOS"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.33,
+     "centerShare": 0.25,
+     "smallText": 26
+    },
+    "eyebrows": [
+     {
+      "text": "DESCUBRIR TCGs",
+      "above": "LA COMUNIDAD",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12.8,
+      "top": 2257
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0f0e1a",
+     "bodyBgHsl": {
+      "h": 245,
+      "s": 0.3,
+      "l": 0.08
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#1a1830",
+       "top": 0,
+       "hsl": {
+        "h": 245,
+        "s": 0.33,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#0f0e1a",
+       "top": 180,
+       "hsl": {
+        "h": 245,
+        "s": 0.3,
+        "l": 0.08
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ecebf5",
+       "share": 0.53
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.28
+      },
+      {
+       "color": "#a6a2bf",
+       "share": 0.14
+      },
+      {
+       "color": "#111111",
+       "share": 0.01
+      },
+      {
+       "color": "#728197",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#00317f",
+      "hsl": {
+       "h": 217,
+       "s": 1,
+       "l": 0.25
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": [
+      {
+       "text": "Ofertas",
+       "ratio": 1,
+       "need": 4.5,
+       "size": 13,
+       "fg": "#111111",
+       "bg": "#0f0e1a"
+      },
+      {
+       "text": "Carrito",
+       "ratio": 1.1,
+       "need": 4.5,
+       "size": 18,
+       "fg": "#08111f",
+       "bg": "#1a1830"
+      },
+      {
+       "text": "Tu carrito está vacío. ¡Añade algo que t",
+       "ratio": 4.4,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#728197",
+       "bg": "#1a1830"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 120,
+     "inHero": 7,
+     "radius": 5,
+     "height": 40,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 113,
+     "heroLabels": [
+      "SEGUIR COMPRANDO"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 3,
+     "shadowOverlay": 1,
+     "shadowSamples": [
+      "span.swiper-pagination-bullet → rgba(0, 0, 0, 0.45) 0px 4px 8px 0px",
+      "span.swiper-pagination-bullet.swiper-pagination-bullet-activ → rgba(0, 0, 0, 0.45) 0px 4px 8px 0px",
+      "span.swiper-pagination-bullet → rgba(0, 0, 0, 0.45) 0px 4px 8px 0px"
+     ],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 10,
+     "hairlineSamples": [
+      "a 304px",
+      "a 304px",
+      "a 304px",
+      "a 304px",
+      "a 304px"
+     ],
+     "outlinedBoxes": 112,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 112,
+     "boxRadius": 6,
+     "squareMedia": 3,
+     "roundedMedia": 9,
+     "mediaRadius": 5,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "bg-image",
+      "ratio": 0.24
+     },
+     {
+      "type": "img",
+      "ratio": 0.09
+     },
+     {
+      "type": "img",
+      "ratio": 0.09
+     },
+     {
+      "type": "img",
+      "ratio": 0.09
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": false,
+     "height": 132,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "belleza",
+     "poppins",
+     "eicons",
+     "font awesome 5 free",
+     "font awesome 5 brands",
+     "line awesome free",
+     "material icons",
+     "avanam-icon",
+     "inter"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 5564,
+    "margins": {
+     "left": 15,
+     "right": 15
+    },
+    "sections": [
+     {
+      "sel": "header#header.site-header",
+      "tag": "header",
+      "top": 48,
+      "height": 132,
+      "words": 1,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "menu",
+       "size": 26,
+       "tag": "i"
+      },
+      "left": 15,
+      "right": 16,
+      "textLeft": 15,
+      "textRight": 349,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#wrapper",
+      "tag": "section",
+      "top": 180,
+      "height": 4649,
+      "words": 677,
+      "media": 108,
+      "middle": 6645,
+      "heading": {
+       "text": "JUEGOS DESTACADOS",
+       "size": 27,
+       "tag": "h4"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": -347,
+      "textRight": -1845,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer#footer.js-footer",
+      "tag": "footer",
+      "top": 4829,
+      "height": 735,
+      "words": 17,
+      "media": 2,
+      "middle": 0,
+      "heading": null,
+      "left": 15,
+      "right": 19,
+      "textLeft": 15,
+      "textRight": 19,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 2944,
+      "height": 656
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Tienda de juegos de mesa",
+      "size": 26,
+      "top": 450,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "menu",
+      "side": "left",
+      "px": 15
+     },
+     {
+      "text": "JUEGOS DESTACADOS",
+      "side": "left",
+      "px": 15
+     },
+     {
+      "text": "LA COMUNIDAD",
+      "side": "left",
+      "px": 15
+     },
+     {
+      "text": "RESEÑAS",
+      "side": "left",
+      "px": 15
+     },
+     {
+      "text": "OFERTAS SEMANALES",
+      "side": "left",
+      "px": 15
+     },
+     {
+      "text": "Productos",
+      "side": "left",
+      "px": 15
+     },
+     {
+      "text": "Ayuda",
+      "side": "left",
+      "px": 15
+     },
+     {
+      "text": "Mi cuenta",
+      "side": "left",
+      "px": 15
+     }
+    ],
+    "edges": [
+     {
+      "x": 25,
+      "n": 7
+     },
+     {
+      "x": 87,
+      "n": 4
+     },
+     {
+      "x": 216,
+      "n": 3
+     },
+     {
+      "x": 403,
+      "n": 3
+     },
+     {
+      "x": 591,
+      "n": 3
+     },
+     {
+      "x": 778,
+      "n": 3
+     },
+     {
+      "x": 966,
+      "n": 3
+     },
+     {
+      "x": 1153,
+      "n": 3
+     },
+     {
+      "x": 1341,
+      "n": 3
+     },
+     {
+      "x": 1528,
+      "n": 3
+     },
+     {
+      "x": 1716,
+      "n": 3
+     },
+     {
+      "x": 1903,
+      "n": 3
+     }
+    ],
+    "leftBlocks": 44,
+    "bodySize": 14,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "emoji",
+   "width": 1440,
+   "message": "Emoji in the page: 🔥 ⚡ ☀",
+   "fix": "Remove. Use words or real imagery.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "width": 1440,
+   "message": "3 box-shadow(s) on elements at rest: span.swiper-pagination-bullet → rgba(0, 0, 0, 0.45) 0px 4px 8px 0px | span.swiper-pagination-bullet.swiper-pagination-bullet-activ → rgba(0, 0, 0, 0.45) 0px 4px 8px 0px | span.swiper-pagination-bullet → rgba(0, 0, 0, 0.45) 0px 4px 8px 0px",
+   "fix": "Remove. Separate surfaces with a tone step or space. Shadows are for things that really float (menus, dialogs, sticky bars).",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "3 thin rule(s)/divider line(s): div.elementor-cart__title 380px | section.elementor-element.elementor-element-d8a76ba 1440px rule | section.elementor-element.elementor-element-0685a23 1440px rule",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "123 boxes drawn with a 1px outline.",
+   "fix": "Define a surface by its fill (one tone step from the page) or leave the content unboxed.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "contrast",
+   "width": 1440,
+   "message": "Unreadable text: \"Ofertas\" 1:1 (#111111 on #0f0e1a); \"Carrito\" 1.1:1 (#08111f on #1a1830)",
+   "fix": "Raise contrast to at least 4.5:1 for text, 3:1 for large display.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "26 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "blank-gap",
+   "width": 1440,
+   "message": "1 stretch(es) of the page hold nothing at all: 724px at 3876px (the screen is 900px tall).",
+   "fix": "Close the gap: a section gap is 120–240px on desktop and 72–112px on a phone. Look for a min-height: 100vh on a short section, an empty grid row, a hidden element still holding its space, or a reveal that never fired. A deliberate rest is a placed picture or colour field, not nothing.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "small-title",
+   "width": 1440,
+   "message": "The h1 is 30px (\"Tienda de juegos de mesa\").",
+   "fix": "Set the title at display size, or make the large text of the first screen the h1.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "ragged-edges",
+   "width": 1440,
+   "message": "Left-aligned text starts at 12 different lines (37px, 323px, 609px, 895px, 1181px, 1467px, 1753px); the three most used hold only 17% of it.",
+   "fix": "Pick two or three anchor lines from the grid and start every heading and paragraph on one of them.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "covered-text",
+   "width": 1440,
+   "message": "Large text lies under another element at some scroll position: \"Tienda de juegos de mesa\" (screen 1, 100% hidden); \"JUEGOS DESTACADOS\" (screen 2, 100% hidden); \"LAS MEJORES MARCAS DE PINTURA Y MODELISMO\" (screen 3, 100% hidden); \"UN EJÉRCITO MÁS… Y PARAMOS\" (screen 3, 100% hidden)",
+   "fix": "Nothing may sit on top of a headline or statement. Move the picture, shorten the pinned run, or raise the text above it (z-index) and give it a ground.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 768,
+   "message": "11 different font sizes (11, 12, 13, 14, 15, 16, 18, 21, 26, 28, 32).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "edge-text",
+   "width": 768,
+   "message": "8 text block(s) sit within 16px of the screen edge: \"menu\" (15px from the left); \"JUEGOS DESTACADOS\" (15px from the left); \"LA COMUNIDAD\" (15px from the left); \"RESEÑAS\" (15px from the left)",
+   "fix": "Keep text inside the page margin (16–32px or more). Only display type deliberately bled past the edge may touch it."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 390,
+   "message": "1 eyebrow/kicker label(s) above headings: \"DESCUBRIR TCGs\" above \"LA COMUNIDAD\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence."
+  },
+  {
+   "level": "FAIL",
+   "id": "body-size",
+   "width": 390,
+   "message": "Body text is 14px (the size most of the running text is set in).",
+   "fix": "Body copy 16–20px. Map small sizes from blueprints onto your body step."
+  },
+  {
+   "level": "WARN",
+   "id": "edge-text",
+   "width": 390,
+   "message": "8 text block(s) sit 12–15px from the phone's edge: \"menu\" (15px); \"JUEGOS DESTACADOS\" (15px); \"LA COMUNIDAD\" (15px)",
+   "fix": "The page margin is 16–20px on a phone; the header and the corner labels sit on it too."
+  },
+  {
+   "level": "FAIL",
+   "id": "reduced-hidden",
+   "width": 1440,
+   "message": "With reduced motion requested, 116 text block(s) on the first screen stay invisible: \"Búsquedas populares\", \"Warhammer\", \"Pinturas Citadel\", \"Juegos de Mesa\"",
+   "fix": "Put every hidden starting state inside @media (prefers-reduced-motion: no-preference); the reduced page is the finished page (references/motion.md §8)."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\before\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\before\\desktop-page-01.jpg",
+    "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\before\\desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\before\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\before\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\before\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\hecto\\Desktop\\dragonchamber\\.taste-skill\\before\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
