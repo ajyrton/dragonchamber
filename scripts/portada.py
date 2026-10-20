@@ -8,7 +8,7 @@ Cambios sobre la original:
   cartas (portada/tcg.html).
 - Antes de la franja "Envío rápido / Envío gratis..." se añade "De tu pedido a tu mesa" y el ticket
   "Comprar aquí" (portada/pedido.html).
-- Fondo dividido y estilos en site/dc/portada.css; comportamiento en site/dc/portada.js.
+- Fondo decorativo (portada/fondo.html) y estilos en site/dc/portada.css; comportamiento en site/dc/portada.js.
 """
 import os
 import re
@@ -56,6 +56,10 @@ def main():
     # 4. Estilos, script y clase del body
     html = html.replace("</head>", '<link rel="stylesheet" href="dc/portada.css"><script src="dc/portada.js" defer></script></head>', 1)
     html = re.sub(r'<body([^>]*)class="', r'<body\1class="dc-portada ', html, count=1)
+
+    # 5. Fondo decorativo (cartas a la izquierda, mesa de pintura a la derecha), justo tras <body>
+    fondo = leer(os.path.join(AQUI, "portada", "fondo.html"))
+    html = re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + fondo, html, count=1)
 
     with open(os.path.join(SITE, "index.html"), "w", encoding="utf-8") as f:
         f.write(html)

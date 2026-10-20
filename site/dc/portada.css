@@ -10,27 +10,45 @@ html[data-theme=dark] body.dc-portada {
   --dc-panel: #0f0e1a; --dc-ink: #ecebf5; --dc-soft: #a6a2bf; --dc-paper: #1a1830; --dc-line: #2e2b4a;
 }
 
-/* ---------- 1. Fondo dividido: a la izquierda TCG, a la derecha pintura y Warhammer ---------- */
-body.dc-portada {
-  background-color: var(--dc-navy) !important;
-  background-image: url("img/fondo-tcg.jpg"), url("img/sala-pintura.jpg") !important;
-  background-size: 50vw 100vh, 50vw 100vh !important;
-  background-position: left top, right top !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-}
+/* ---------- 1. Fondo: montón de cartas a la izquierda, mesa de pintura a la derecha ----------
+   Cada lado ocupa solo la franja que queda libre junto a la columna de contenido (más un margen que
+   se esconde detrás), así las imágenes conservan su proporción y no se deforman. */
+html:has(body.dc-portada) { background: var(--dc-fondo-suelo, #070d18); }
+html[data-theme] body.dc-portada, html body.dc-portada { background: transparent !important; }
+body.dc-portada { --dc-col: 1470px; --dc-franja: max(0px, calc((100vw - var(--dc-col)) / 2)); }
 html body.dc-portada #wrapper,
 html body.dc-portada #main,
 html body.dc-portada #content-wrapper,
 html body.dc-portada #hero_section { background: transparent !important; }
 body.dc-portada #wrapper .elementor-9 {
-  max-width: 1470px; margin: 0 auto; padding: 0 20px 40px; background: var(--dc-panel);
+  position: relative; z-index: 1; max-width: var(--dc-col); margin: 0 auto; padding: 20px 20px 40px; background: var(--dc-panel);
 }
-/* La foto de la derecha (sala-pintura) ya trae su degradado a la izquierda; la de TCG se oscurece un poco */
-@media (max-width: 1510px) { body.dc-portada #wrapper .elementor-9 { padding: 0 0 40px; } }
+/* La columna es un tablero apoyado sobre la mesa: sombra suave hacia abajo, solo donde hay fondo detrás */
+@media (min-width: 1511px) { body.dc-portada #wrapper .elementor-9 { box-shadow: 0 30px 70px rgba(0, 0, 0, .55), 0 6px 18px rgba(0, 0, 0, .35); } }
+.dc-fondo { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+.dc-fondo__lado { position: absolute; top: 0; bottom: 0; width: calc(var(--dc-franja) + 140px); }
+.dc-fondo__lado--cartas { left: 0; -webkit-mask-image: linear-gradient(to right, #000 55%, transparent); mask-image: linear-gradient(to right, #000 55%, transparent); }
+.dc-fondo__lado--pintura { right: 0; -webkit-mask-image: linear-gradient(to left, #000 55%, transparent); mask-image: linear-gradient(to left, #000 55%, transparent); }
+.dc-fondo__lado--pintura img { width: 100%; height: 100%; object-fit: cover; object-position: 64% 55%; filter: brightness(.62) saturate(.85); }
+/* Las cartas: dorsos reales, girados, con sombra (flotan sobre la mesa) y más oscuros cuanto más al fondo */
+.dc-fondo__carta {
+  /* --l es una fracción de la franja visible: las cartas caben en ella y solo una esquina pasa bajo la columna */
+  position: absolute; top: var(--t); left: calc(var(--dc-franja) * var(--l)); width: clamp(130px, calc(var(--dc-franja) * .8), 240px); height: auto; aspect-ratio: 5 / 7; object-fit: cover;
+  border-radius: 9px; z-index: var(--z); transform: rotate(var(--r)); filter: brightness(var(--b)) saturate(.8);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, .55), 0 2px 4px rgba(0, 0, 0, .4);
+}
+/* Sin franja libre (pantallas de 1510 px o menos) no se dibuja el fondo */
+@media (max-width: 1510px) {
+  .dc-fondo { display: none; }
+  body.dc-portada #wrapper .elementor-9 { padding: 20px 0 40px; }
+}
+@media (prefers-reduced-motion: no-preference) and (min-width: 1511px) {
+  .dc-fondo__carta { animation: dc-carta-cae .9s cubic-bezier(.16, 1, .3, 1) both; animation-delay: calc(var(--z) * 80ms); }
+  @keyframes dc-carta-cae { from { opacity: 0; transform: translateY(-40px) rotate(calc(var(--r) - 12deg)); } }
+}
 
 /* ---------- 2. Slider de novedades ---------- */
-.dc-hero { position: relative; margin: 20px 0 0; border-radius: 12px; overflow: hidden; background: var(--dc-navy); }
+.dc-hero { position: relative; margin: 0; border-radius: 12px; overflow: hidden; background: var(--dc-navy); }
 .dc-hero__slides { position: relative; min-height: clamp(520px, 40vw, 600px); }
 .dc-slide {
   position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: center;
@@ -188,7 +206,6 @@ html[data-theme=dark] .dc-ticket__btn { background: var(--dc-cyan); color: var(-
   .dc-ticket { margin-top: 30px; justify-self: center; width: min(100%, 380px); }
 }
 @media (max-width: 767px) {
-  body.dc-portada { background-image: none !important; }
   .dc-hero { margin: 10px 0 0; border-radius: 0; }
   .dc-hero__slides { min-height: 700px; }
   .dc-slide { grid-template-columns: 1fr; padding: 28px 20px 170px; gap: 18px; align-content: start; }
