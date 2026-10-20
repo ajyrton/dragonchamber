@@ -31,11 +31,20 @@ original (`site/portada-original.html`); `mirror.py` lo hace solo al terminar. S
 - **Slider de novedades y eventos** (`scripts/portada/slider.html`): sustituye al slider original.
   Siete diapositivas (eventos en tienda y la última o próxima expansión de cada TCG) y, como
   indicadores, una mano de cartas en abanico.
+- **Juegos de cartas** (`scripts/portada/tcg.html`): sustituye a las pestañas Ofertas / Lo último /
+  Lo más vendido. Dorsos de Magic, Yu-Gi-Oh!, One Piece y Riftbound con enlace a su apartado, y
+  Accesorios TCG con un álbum y dos dados animados.
 - **De tu pedido a tu mesa** (`scripts/portada/pedido.html`): un dragoncito lleva tu paquete; se
   arrastra por la ruta (o con las flechas del teclado) y la fila de fotos le sigue.
 - **Ticket "Comprar aquí"**: compacto, con botón para ver todas las condiciones.
 - **Fondo dividido**: a la izquierda una partida de cartas y a la derecha la mesa de pintura con
   Warhammer; se ve a los lados en pantallas de más de 1510 px.
+
+**Menú** (`scripts/menu.py`, se aplica a todas las páginas al copiar): "+ Miniaturas" pasa a ser una
+columna dentro de "Pintura y Modelismo" y se añade "Ofertas" a la barra (`site/ofertas.html`).
+
+Foto de Star Trek: maqueta del USS Enterprise-D, Joe Ross, CC BY-SA 2.0, vía Wikimedia Commons
+(crédito en la propia diapositiva y en `docs/creditos-imagenes.json`).
 
 Estilos y comportamiento: `site/dc/portada.css` y `site/dc/portada.js`. **Las fechas del slider hay
 que revisarlas a mano**: están escritas en `scripts/portada/slider.html`.

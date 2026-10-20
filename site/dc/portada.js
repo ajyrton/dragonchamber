@@ -180,4 +180,18 @@
       btn.textContent = abrir ? 'Ver menos' : 'Ver todas las condiciones';
     });
   }
+  /* ---------- 4. Dorsos TCG: se inclinan hacia el ratón y brillan ---------- */
+  if (!reduce && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('.dc-tcgcard').forEach(function (t) {
+      var c = t.querySelector('.dc-tcgcard__card');
+      t.addEventListener('mousemove', function (e) {
+        var r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        c.style.setProperty('--ry', ((x - .5) * 24) + 'deg');
+        c.style.setProperty('--rx', ((.5 - y) * 24) + 'deg');
+        c.style.setProperty('--mx', x * 100 + '%');
+        c.style.setProperty('--my', y * 100 + '%');
+      });
+      t.addEventListener('mouseleave', function () { c.style.setProperty('--rx', '0deg'); c.style.setProperty('--ry', '0deg'); });
+    });
+  }
 })();

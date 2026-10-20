@@ -50,6 +50,10 @@ body.dc-portada #wrapper .elementor-9 {
 .dc-slide__img { position: relative; margin: 0; justify-self: center; width: min(100%, 340px); aspect-ratio: 1; padding: 16px;
   background: #fff; border-radius: 14px; transform: rotate(3deg); box-shadow: 0 18px 40px rgba(0, 0, 0, .35); }
 .dc-slide__img img { width: 100%; height: 100%; object-fit: contain; }
+.dc-slide__img--foto { width: min(100%, 460px); aspect-ratio: 4 / 3; padding: 10px 10px 30px; }
+.dc-slide__img--foto img { object-fit: cover; object-position: 40% 60%; border-radius: 6px; }
+.dc-slide__img figcaption { position: absolute; left: 12px; right: 12px; bottom: 7px; font-size: 11px; color: #5d5878; text-align: right; }
+.dc-slide__img figcaption a { color: inherit; }
 
 .dc-hero__arrow {
   position: absolute; top: 42%; z-index: 3; width: 44px; height: 44px; border-radius: 50%; border: 0; cursor: pointer;
@@ -190,4 +194,55 @@ html[data-theme=dark] .dc-ticket__btn { background: var(--dc-cyan); color: var(-
 @media (prefers-reduced-motion: reduce) {
   .dc-slide, .dc-cardot, .dc-dragon:not(.is-arrastrando) { transition: none; }
   .dc-cardot[aria-current="true"] { animation: none; }
+}
+
+/* ---------- 5. Juegos de cartas: dorsos con enlace ---------- */
+.dc-tcg { margin: 10px 15px 50px; text-align: center; }
+.dc-tcg .dc-h2 { margin-bottom: 28px; }
+.dc-tcg__row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px; perspective: 1000px; }
+.dc-tcgcard { display: flex; flex-direction: column; align-items: center; gap: 14px; text-decoration: none !important; color: var(--dc-ink) !important; }
+.dc-tcgcard__card {
+  position: relative; display: block; width: min(100%, 210px); aspect-ratio: 5 / 7; border-radius: 12px; overflow: hidden;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .2s, box-shadow .2s;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, .3);
+}
+.dc-tcgcard__card svg { display: block; width: 100%; height: 100%; }
+.dc-tcgcard__card::after {
+  content: ""; position: absolute; inset: 0; opacity: 0; transition: opacity .2s; pointer-events: none; mix-blend-mode: overlay;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, .6), transparent 45%),
+    linear-gradient(115deg, transparent 30%, rgba(255, 220, 120, .3) 45%, rgba(120, 200, 255, .3) 55%, transparent 70%);
+}
+.dc-tcgcard:hover .dc-tcgcard__card, .dc-tcgcard:focus-visible .dc-tcgcard__card { box-shadow: 0 22px 36px rgba(0, 0, 0, .4); }
+.dc-tcgcard:hover .dc-tcgcard__card::after, .dc-tcgcard:focus-visible .dc-tcgcard__card::after { opacity: 1; }
+.dc-tcgcard:focus-visible { outline: 3px solid var(--dc-gold); outline-offset: 6px; border-radius: 12px; }
+.dc-tcgcard__name { font: 600 16px Poppins, sans-serif; }
+
+/* Accesorios: álbum con fundas y dos dados que ruedan (posición final si no hay animación) */
+.dc-dado--1 { transform: translate(92px, 282px) rotate(18deg); }
+.dc-dado--2 { transform: translate(165px, 280px) rotate(-12deg); }
+@media (prefers-reduced-motion: no-preference) {
+  .dc-dado--1 { animation: dc-rueda1 3.4s cubic-bezier(.3, .7, .4, 1) infinite alternate; }
+  .dc-dado--2 { animation: dc-rueda2 3.4s cubic-bezier(.3, .7, .4, 1) infinite alternate; animation-delay: -.6s; }
+  .dc-album__brillo { animation: dc-brilla 2.4s ease-in-out infinite alternate; }
+  .dc-tcgcard--acc:hover .dc-dado { animation-duration: 1.4s; }
+  @keyframes dc-rueda1 {
+    0% { transform: translate(40px, 240px) rotate(0deg); }
+    35% { transform: translate(70px, 286px) rotate(200deg); }
+    50% { transform: translate(82px, 272px) rotate(250deg); }
+    65%, 100% { transform: translate(92px, 282px) rotate(378deg); }
+  }
+  @keyframes dc-rueda2 {
+    0% { transform: translate(215px, 236px) rotate(0deg); }
+    35% { transform: translate(185px, 284px) rotate(-220deg); }
+    50% { transform: translate(175px, 268px) rotate(-280deg); }
+    65%, 100% { transform: translate(165px, 280px) rotate(-372deg); }
+  }
+  @keyframes dc-brilla { from { opacity: .25; } to { opacity: .9; } }
+}
+@media (max-width: 991px) {
+  .dc-tcg__row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .dc-tcg__row { display: flex; overflow-x: auto; gap: 16px; scroll-snap-type: x mandatory; padding-bottom: 8px; scrollbar-width: none; }
+  .dc-tcgcard { flex: 0 0 42vw; scroll-snap-align: start; }
 }

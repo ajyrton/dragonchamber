@@ -4,6 +4,8 @@ Uso:  python scripts/portada.py      (mirror.py lo ejecuta solo al terminar)
 
 Cambios sobre la original:
 - El slider principal se sustituye por el de novedades y eventos con la mano de cartas (portada/slider.html).
+- Las pestañas Ofertas / Lo último / Lo más vendido se sustituyen por los dorsos de los juegos de
+  cartas (portada/tcg.html).
 - Antes de la franja "Envío rápido / Envío gratis..." se añade "De tu pedido a tu mesa" y el ticket
   "Comprar aquí" (portada/pedido.html).
 - Fondo dividido y estilos en site/dc/portada.css; comportamiento en site/dc/portada.js.
@@ -43,11 +45,15 @@ def main():
     a, b = bloque_section(html, "main-slider-section")
     html = html[:a] + leer(os.path.join(AQUI, "portada", "slider.html")) + html[b:]
 
-    # 2. "De tu pedido a tu mesa" + ticket, antes de la franja de envío y pago
+    # 2. Pestañas Ofertas / Lo último / Lo más vendido -> dorsos de los juegos de cartas
+    a, b = bloque_section(html, "elementor-element-e41162e")
+    html = html[:a] + leer(os.path.join(AQUI, "portada", "tcg.html")) + html[b:]
+
+    # 3. "De tu pedido a tu mesa" + ticket, antes de la franja de envío y pago
     a, _ = bloque_section(html, "elementor-element-bc79677")
     html = html[:a] + leer(os.path.join(AQUI, "portada", "pedido.html")) + html[a:]
 
-    # 3. Estilos, script y clase del body
+    # 4. Estilos, script y clase del body
     html = html.replace("</head>", '<link rel="stylesheet" href="dc/portada.css"><script src="dc/portada.js" defer></script></head>', 1)
     html = re.sub(r'<body([^>]*)class="', r'<body\1class="dc-portada ', html, count=1)
 

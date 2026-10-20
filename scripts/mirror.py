@@ -20,12 +20,15 @@ import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from menu import ajustar_menu  # noqa: E402  (Miniaturas dentro de Pintura y "Ofertas" en la barra)
+
 BASE = "https://thedragonchambergames.com/prestashop/"
 HOST = "thedragonchambergames.com"
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "site")
 
 # Puntos de partida del rastreo (rutas relativas a BASE)
-SEEDS = ["", "contacto", "mapa-del-sitio"]
+SEEDS = ["", "contacto", "mapa-del-sitio", "ofertas"]
 LIMITE_PAGINAS = 400
 
 UA = {"User-Agent": "Mozilla/5.0 (DragonChamber mirror)"}
@@ -59,7 +62,7 @@ def es_pagina_copiable(path):
     return (path == ""
             or re.fullmatch(r"\d+-[^/.]*", path) is not None
             or re.fullmatch(r"(brand|content)/[^/.]+", path) is not None
-            or path in ("contacto", "mapa-del-sitio", "brand"))
+            or path in ("contacto", "mapa-del-sitio", "brand", "ofertas"))
 
 
 def nombre_local(path):
@@ -241,7 +244,7 @@ def reescribir(path, html, copiadas):
             return f'{attr}="{", ".join(parts)}"'
         return f'{attr}="{destino(val, attr)}"'
 
-    html = mark_copy(ATTR_RE.sub(repl, html))
+    html = ajustar_menu(mark_copy(ATTR_RE.sub(repl, html)))
     with open(os.path.join(ROOT, nombre_local(path)), "w", encoding="utf-8") as f:
         f.write(html)
 
