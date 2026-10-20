@@ -99,6 +99,23 @@ ATTR_RE = re.compile(r'\b(src|href|data-src|data-full-size-image-url|data-image-
 ASSET_EXT = re.compile(r"\.(css|js|png|jpe?g|gif|webp|svg|ico|woff2?|ttf|eot|otf|mp4|webm)(\?|$)", re.I)
 
 
+BANNER = (
+    '<div id="dc-copia" style="position:sticky;top:0;z-index:100000;background:#c9a227;color:#1b1730;'
+    'font:600 13px/1.4 sans-serif;text-align:center;padding:6px 12px">'
+    'Copia de pruebas, no es la tienda. Para comprar ve a '
+    '<a href="https://thedragonchambergames.com/prestashop/" style="color:inherit">thedragonchambergames.com</a></div>'
+)
+
+
+def mark_copy(html):
+    """Marca la pagina como copia: noindex + aviso visible (idempotente)."""
+    if 'id="dc-copia"' in html:
+        return html
+    html = re.sub(r"<head[^>]*>", lambda m: m.group(0) + '<meta name="robots" content="noindex,nofollow">', html, 1)
+    html = re.sub(r"<body[^>]*>", lambda m: m.group(0) + BANNER, html, 1)
+    return html
+
+
 def mirror_page(path, out_name, page_map):
     url = urllib.parse.urljoin(BASE, path)
     print(f"-> {url}")
@@ -130,12 +147,19 @@ def mirror_page(path, out_name, page_map):
             out.append(" ".join(bits))
         return f'{attr}="{", ".join(out) if "srcset" in attr else out[0]}"'
 
-    html = ATTR_RE.sub(repl, html)
+    html = mark_copy(ATTR_RE.sub(repl, html))
     with open(os.path.join(ROOT, out_name), "w", encoding="utf-8") as f:
         f.write(html)
 
 
 def main():
+    if "--solo-marcar" in sys.argv:
+        for _, out in PAGES:
+            f = os.path.join(ROOT, out)
+            if os.path.exists(f):
+                html = open(f, encoding="utf-8").read()
+                open(f, "w", encoding="utf-8").write(mark_copy(html))
+        return
     os.makedirs(ROOT, exist_ok=True)
     page_map = {urllib.parse.urljoin(BASE, p): out for p, out in PAGES}
     for path, out in PAGES:
