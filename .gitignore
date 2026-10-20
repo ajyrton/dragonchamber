@@ -13,3 +13,9 @@ __pycache__/
 
 # Trabajo local de la skill de diseño
 .taste-skill/
+
+# Impeccable (se instala con: npx impeccable install --providers=claude --scope=project)
+.claude/skills/
+.claude/agents/
+.claude/settings.local.json
+.impeccable/

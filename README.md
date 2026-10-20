@@ -74,3 +74,15 @@ que ya existan como HTML, así que haz commit de tus cambios antes.
   HTML/CSS hay que trasladarlo luego al tema (o a `custom.css` / `custom.js`) en el servidor.
 - Para un clon completo (PHP + base de datos) hace falta acceso FTP y un volcado de la BD.
   **Nunca subas `app/config/parameters.php` ni volcados de la BD a este repositorio.**
+
+## Revisión de diseño (Impeccable)
+
+El proyecto usa la skill [Impeccable](https://github.com/pbakaus/impeccable) para Claude Code. No se
+sube al repositorio; para instalarla:
+
+```bash
+npx impeccable install --providers=claude --scope=project
+```
+
+Revisar la portada sin agente: `npx impeccable detect http://localhost:8080/index.html`
+(con el servidor local en marcha). Telemetría desactivada con `npx impeccable telemetry off`.

@@ -14,7 +14,7 @@ html[data-theme=dark] #dc-theme{background:#f5d76e;color:#1b1730}
 .main-slider .swiper-pagination-bullet{position:relative;width:34px!important;height:48px!important;margin:0 0 0 -14px!important;
   border-radius:6px!important;opacity:.75!important;border:2px solid #c9a227;box-sizing:border-box;
   background:linear-gradient(145deg,var(--c1,#2a1a4a),var(--c2,#6a3aa8))!important;box-shadow:0 4px 8px rgba(0,0,0,.45);
-  transition:transform .35s cubic-bezier(.2,.9,.3,1.3),box-shadow .35s,opacity .35s,filter .35s}
+  transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s,opacity .35s,filter .35s}
 .main-slider .swiper-pagination-bullet:first-child{margin-left:0!important}
 .main-slider .swiper-pagination-bullet:nth-child(3n+1){--c1:#2a1a4a;--c2:#6a3aa8}
 .main-slider .swiper-pagination-bullet:nth-child(3n+2){--c1:#6b2a14;--c2:#c8661f}
@@ -102,7 +102,7 @@ html[data-theme=dark] .page-content,
 html[data-theme=dark] .product-description,
 html[data-theme=dark] .elementor-text-editor,
 html[data-theme=dark] .elementor-widget-text-editor{color:var(--dc-fg)!important}
-html[data-theme=dark] p,
+html[data-theme=dark] p:not(.elementor-heading-title),
 html[data-theme=dark] li,
 html[data-theme=dark] .breadcrumb a,
 html[data-theme=dark] .regular-price,
@@ -153,3 +153,12 @@ html[data-theme=dark] .widget-tab-title,
 html[data-theme=dark] .widget-tab-title .text,
 html[data-theme=dark] .elementor-cart__title{color:var(--dc-fg)!important}
 html[data-theme=dark] .widget-tab-title.active .text{color:#08111f!important}
+
+/* Etiqueta amarilla "Oferta en Accesorios" de la portada: texto oscuro sobre su fondo */
+html[data-theme=dark] .elementor-element-a31975e .elementor-heading-title,
+html[data-theme=dark] .elementor-element-d2467b4 .elementor-heading-title{color:#1b1b2f!important}
+.elementor-element-d2467b4 .elementor-heading-title{font-size:13px!important}
+.elementor-element-a31975e > .elementor-widget-container,
+.elementor-element-d2467b4 > .elementor-widget-container{padding:4px 10px!important}
+/* "Fuera de stock": rojo algo más oscuro para llegar a contraste AA con el texto blanco */
+.product-flag.out_of_stock,.product-flag.out-of-stock{background-color:#c9302c!important}

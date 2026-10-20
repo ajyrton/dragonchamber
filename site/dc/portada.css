@@ -71,7 +71,7 @@ body.dc-portada #wrapper .elementor-9 {
   background: var(--c); opacity: .8; transform-origin: 50% 120%;
   transform: translateY(var(--drop)) rotate(var(--rot));
   box-shadow: 0 4px 10px rgba(0, 0, 0, .45);
-  transition: transform .35s cubic-bezier(.2, .9, .3, 1.3), opacity .3s, box-shadow .3s, filter .3s;
+  transition: transform .4s cubic-bezier(.16, 1, .3, 1), opacity .3s, box-shadow .3s, filter .3s;
 }
 .dc-cardot::before { content: ""; position: absolute; inset: 4px; border: 1px solid rgba(245, 215, 110, .7); border-radius: 4px; }
 .dc-cardot svg { position: absolute; inset: 8px; width: calc(100% - 16px); height: calc(100% - 16px); }
@@ -92,7 +92,7 @@ body.dc-portada #wrapper .elementor-9 {
 /* ---------- 3. De tu pedido a tu mesa ---------- */
 .dc-pedido {
   display: grid; grid-template-columns: minmax(0, 1fr) 340px; grid-template-areas: "head head" "ruta ticket" "pasos ticket";
-  column-gap: 40px; margin: 60px 15px 50px; color: var(--dc-ink);
+  column-gap: 40px; margin: 72px 24px 56px; color: var(--dc-ink);
 }
 .dc-pedido__head { grid-area: head; margin-bottom: 26px; }
 .dc-h2 { margin: 0 0 6px; font-family: Belleza, Poppins, sans-serif; font-weight: 600; font-size: 30px; text-transform: uppercase; color: var(--dc-ink); }
@@ -130,8 +130,10 @@ body.dc-portada #wrapper .elementor-9 {
   overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
 }
 .dc-pasos::-webkit-scrollbar { display: none; }
-.dc-pasos li { flex: 0 0 230px; scroll-snap-align: start; opacity: .55; transition: opacity .3s, transform .3s; }
-.dc-pasos li.is-aqui { opacity: 1; transform: translateY(-6px); }
+.dc-pasos li { flex: 0 0 230px; scroll-snap-align: start; transition: transform .3s cubic-bezier(.16, 1, .3, 1); }
+.dc-pasos li img { transition: opacity .3s; }
+.dc-pasos li:not(.is-aqui) img { opacity: .5; }
+.dc-pasos li.is-aqui { transform: translateY(-6px); }
 .dc-pasos img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px; }
 .dc-pasos h3 { margin: 12px 0 4px; font: 600 17px Poppins, sans-serif; color: var(--dc-ink); }
 .dc-pasos p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--dc-soft); }
@@ -175,12 +177,14 @@ html[data-theme=dark] .dc-ticket__btn { background: var(--dc-cyan); color: var(-
   .dc-slide h2 { font-size: 26px; }
   .dc-hero__arrow { display: none; }
   .dc-hand { gap: 8px; }
-  .dc-cardot { width: 36px; height: 50px; }
+  .dc-hand { gap: 6px; }
+  .dc-cardot { width: 44px; height: 60px; }
   .dc-ruta { margin: 0 24px; }
-  .dc-ruta__paradas button { font-size: 0; gap: 0; }
+  .dc-ruta__paradas button { font-size: 0; gap: 0; min-width: 44px; min-height: 44px; justify-content: flex-start; }
   .dc-ruta__paradas button.is-aqui { font-size: 12px; gap: 6px; }
   .dc-pasos li { flex-basis: 70vw; }
-  .dc-pedido { margin: 40px 15px; }
+  .dc-pedido { margin: 48px 16px; }
+  .dc-tcg { margin: 40px 16px 48px; }
 }
 
 /* ---------- Movimiento ---------- */
@@ -197,7 +201,7 @@ html[data-theme=dark] .dc-ticket__btn { background: var(--dc-cyan); color: var(-
 }
 
 /* ---------- 5. Juegos de cartas: dorsos con enlace ---------- */
-.dc-tcg { margin: 10px 15px 50px; text-align: center; }
+.dc-tcg { margin: 56px 24px 64px; text-align: center; }
 .dc-tcg .dc-h2 { margin-bottom: 28px; }
 .dc-tcg__row { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; perspective: 1000px; }
 .dc-tcgcard { display: flex; flex-direction: column; align-items: center; gap: 14px; text-decoration: none !important; color: var(--dc-ink) !important; }
@@ -247,3 +251,17 @@ html[data-theme=dark] .dc-ticket__btn { background: var(--dc-cyan); color: var(-
   .dc-tcg__row { display: flex; overflow-x: auto; gap: 16px; scroll-snap-type: x mandatory; padding-bottom: 8px; scrollbar-width: none; }
   .dc-tcgcard { flex: 0 0 42vw; scroll-snap-align: start; }
 }
+
+/* ---------- Pulido (impeccable) ---------- */
+/* Modo oscuro: los textos de las diapositivas siguen siendo claros sobre su color */
+html[data-theme=dark] body.dc-portada .dc-slide__txt > p:not(.dc-slide__when) { color: rgba(255, 255, 255, .9) !important; }
+html[data-theme=dark] body.dc-portada .dc-slide__when { color: var(--k) !important; }
+html[data-theme=dark] body.dc-portada .dc-slide h2 { color: #fff !important; }
+html[data-theme=dark] body.dc-portada .dc-pasos p,
+html[data-theme=dark] body.dc-portada .dc-pedido__head p,
+html[data-theme=dark] body.dc-portada .dc-ticket dd.d { color: var(--dc-soft) !important; }
+/* Foco visible y selección con los colores de la marca */
+.dc-ruta__paradas button:focus-visible, .dc-ticket__btn:focus-visible, .dc-pasos:focus-visible,
+.dc-hero__arrow:focus-visible, .dc-cardot:focus-visible { outline: 3px solid var(--dc-gold); outline-offset: 3px; }
+body.dc-portada ::selection { background: var(--dc-cyan); color: var(--dc-navy); }
+.dc-ticket__btn:active, .dc-slide__btn:active { transform: translateY(1px); }
