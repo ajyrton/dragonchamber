@@ -23,6 +23,22 @@ igual que el carrito, la cuenta, el buscador o la página 2 de un listado, lleva
 `site/no-copiada.html`, así que la navegación nunca sale del prototipo. Las fotos de producto se
 cargan desde la tienda real.
 
+## Portada rediseñada
+
+`site/index.html` es la portada nueva, hecha a mano (no la toca `mirror.py`). La copia de la portada
+actual está en `site/portada-original.html` para comparar. Archivos propios: `site/dc/inicio.css`,
+`site/dc/inicio.js` y las fotos en `site/dc/img/`.
+
+- **Idea:** la tienda es una carta coleccionable. La portada es la carta de The Dragon Chamber y el
+  catálogo se presenta en seis mazos (Juegos de mesa, Cartas, Warhammer y wargames, Pintura y
+  modelismo, Rol y libros, Accesorios de juego).
+- **En vivo:** la carta dice si la tienda está abierta ahora (hora de Almería) y a qué hora se puede
+  recoger un pedido hecho en ese momento (recogida en 2 h de tienda abierta).
+- **Reutiliza:** modo oscuro, dorsos TCG con inclinación, cartas como indicador (los lomos del mazo)
+  y el asistente del dragón.
+- **Fotos:** banners e Instagram de la propia tienda; la Alcazaba es de Wikimedia Commons (CC0,
+  Jebulon). Créditos en `docs/creditos-imagenes.json`.
+
 ## Verlo en local
 
 ```bash

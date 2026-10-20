@@ -10,3 +10,6 @@ desktop.ini
 .DS_Store
 .vscode/
 __pycache__/
+
+# Trabajo local de la skill de diseño
+.taste-skill/
