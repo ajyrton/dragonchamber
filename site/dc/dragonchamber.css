@@ -1,0 +1,148 @@
+/* The Dragon Chamber – mejoras visuales sobre el tema Ebotic
+   1. Botón de modo oscuro   2. Slider de portada con cartas   3. Dorsos TCG   4. Modo oscuro */
+
+/* ---------- 1. Botón luna / sol (abajo a la izquierda) ---------- */
+#dc-theme{position:fixed;left:16px;bottom:72px;z-index:99990;width:46px;height:46px;border-radius:50%;
+  border:2px solid #c9a227;background:#1b1b2f;color:#f5d76e;font-size:20px;line-height:1;cursor:pointer;
+  box-shadow:0 6px 14px rgba(0,0,0,.35);transition:transform .2s}
+#dc-theme:hover{transform:scale(1.08)}
+#dc-theme:focus-visible{outline:3px solid #c9a227;outline-offset:3px}
+html[data-theme=dark] #dc-theme{background:#f5d76e;color:#1b1730}
+
+/* ---------- 2. Slider de portada: los puntos pasan a ser cartas ---------- */
+.main-slider .swiper-pagination{display:flex;justify-content:center;align-items:flex-end;bottom:8px!important;height:70px}
+.main-slider .swiper-pagination-bullet{position:relative;width:34px!important;height:48px!important;margin:0 0 0 -14px!important;
+  border-radius:6px!important;opacity:.75!important;border:2px solid #c9a227;box-sizing:border-box;
+  background:linear-gradient(145deg,var(--c1,#2a1a4a),var(--c2,#6a3aa8))!important;box-shadow:0 4px 8px rgba(0,0,0,.45);
+  transition:transform .35s cubic-bezier(.2,.9,.3,1.3),box-shadow .35s,opacity .35s,filter .35s}
+.main-slider .swiper-pagination-bullet:first-child{margin-left:0!important}
+.main-slider .swiper-pagination-bullet:nth-child(3n+1){--c1:#2a1a4a;--c2:#6a3aa8}
+.main-slider .swiper-pagination-bullet:nth-child(3n+2){--c1:#6b2a14;--c2:#c8661f}
+.main-slider .swiper-pagination-bullet:nth-child(3n){--c1:#1d2c4d;--c2:#3b5a96}
+.main-slider .swiper-pagination-bullet:nth-child(odd){transform:rotate(-4deg)}
+.main-slider .swiper-pagination-bullet:nth-child(even){transform:rotate(3deg) translateY(2px)}
+.main-slider .swiper-pagination-bullet:before{content:"";position:absolute;inset:4px;border:1px solid rgba(245,215,110,.7);border-radius:3px}
+.main-slider .swiper-pagination-bullet:after{content:"✦";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#f5d76e;font-size:16px}
+.main-slider .swiper-pagination-bullet:hover{transform:translateY(-8px) rotate(0);opacity:1!important;z-index:5}
+.main-slider .swiper-pagination-bullet-active{opacity:1!important;transform:translateY(-16px) rotate(0) scale(1.12)!important;z-index:10;
+  filter:brightness(1.25);border-color:#f5d76e;animation:dc-glow 1.8s ease-in-out infinite alternate}
+@keyframes dc-glow{from{box-shadow:0 10px 18px rgba(0,0,0,.55),0 0 8px 1px rgba(245,215,110,.5)}
+  to{box-shadow:0 10px 18px rgba(0,0,0,.55),0 0 18px 5px rgba(245,215,110,.95)}}
+
+/* ---------- 3. Dorsos animados en las subcategorías TCG ---------- */
+.dc-tcg-list{perspective:900px}
+.subcategory-image .dc-card{position:relative;display:block;width:min(100%,170px);aspect-ratio:5/7;margin:0 auto;border-radius:12px;overflow:hidden;
+  transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .2s,box-shadow .2s;box-shadow:0 12px 24px rgba(0,0,0,.35)}
+.subcategory-image .dc-card svg{display:block;width:100%;height:100%}
+.subcategory-image .dc-card:after{content:"";position:absolute;inset:0;opacity:0;transition:opacity .2s;pointer-events:none;mix-blend-mode:overlay;
+  background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.6),transparent 45%),
+  linear-gradient(115deg,transparent 30%,rgba(255,220,120,.3) 45%,rgba(120,200,255,.3) 55%,transparent 70%)}
+.subcategory-item:hover .dc-card:after,.subcategory-image a:focus-visible .dc-card:after{opacity:1}
+.subcategory-item:hover .dc-card{box-shadow:0 22px 36px rgba(0,0,0,.45)}
+
+@media (prefers-reduced-motion:reduce){
+  .main-slider .swiper-pagination-bullet,.subcategory-image .dc-card,#dc-theme{transition:none!important;animation:none!important}}
+
+/* ---------- 4. Modo oscuro ---------- */
+html[data-theme=dark]{color-scheme:dark;
+  --dc-bg:#0f0e1a;--dc-panel:#1a1830;--dc-panel2:#232040;--dc-line:#2e2b4a;--dc-fg:#ecebf5;--dc-muted:#a6a2bf;--dc-gold:#f5d76e}
+html[data-theme=dark] body,
+html[data-theme=dark] #wrapper,
+html[data-theme=dark] #main,
+html[data-theme=dark] #content-wrapper,
+html[data-theme=dark] .site-header,
+html[data-theme=dark] #header,
+html[data-theme=dark] #footer,
+html[data-theme=dark] .elementor-section:not([style*=background]),
+html[data-theme=dark] .page-content,
+html[data-theme=dark] .page-header,
+html[data-theme=dark] .breadcrumb{background-color:var(--dc-bg)!important;color:var(--dc-fg)}
+
+/* Paneles, tarjetas y menús desplegables */
+html[data-theme=dark] .card,
+html[data-theme=dark] .block-category,
+html[data-theme=dark] #subcategories,
+html[data-theme=dark] .product-miniature .thumbnail-container,
+html[data-theme=dark] .product-miniature .product-container,
+html[data-theme=dark] .avaorg-sub-inner,
+html[data-theme=dark] [class*=avaorg-menu-col],
+html[data-theme=dark] .dropdown-menu,
+html[data-theme=dark] .modal-content,
+html[data-theme=dark] .tabs,
+html[data-theme=dark] .product-information,
+html[data-theme=dark] .product-actions,
+html[data-theme=dark] .contact-form,
+html[data-theme=dark] .elementor-element-74b73113,
+html[data-theme=dark] .elementor-element-bc79677,
+html[data-theme=dark] .elementor-cart__container,
+html[data-theme=dark] #search_filters,
+html[data-theme=dark] .products-selection,
+html[data-theme=dark] .block-reassurance,
+html[data-theme=dark] .block-categories,
+html[data-theme=dark] #left-column .block,
+html[data-theme=dark] #right-column .block,
+html[data-theme=dark] #searchbox,
+html[data-theme=dark] .select-title,
+html[data-theme=dark] .hero-section,
+html[data-theme=dark] .elementor-cart__main{background-color:var(--dc-panel)!important;color:var(--dc-fg)!important;border-color:var(--dc-line)!important}
+
+/* Textos */
+html[data-theme=dark] h1,html[data-theme=dark] h2,html[data-theme=dark] h3,
+html[data-theme=dark] h4,html[data-theme=dark] h5,html[data-theme=dark] h6,
+html[data-theme=dark] .h1,html[data-theme=dark] .h2,html[data-theme=dark] .h3,
+html[data-theme=dark] .elementor-heading-title,
+html[data-theme=dark] .product-title a,
+html[data-theme=dark] .product-name a,
+html[data-theme=dark] .subcategory-name,
+html[data-theme=dark] .price,
+html[data-theme=dark] .current-price,
+html[data-theme=dark] label,
+html[data-theme=dark] .page-content,
+html[data-theme=dark] .product-description,
+html[data-theme=dark] .elementor-text-editor,
+html[data-theme=dark] .elementor-widget-text-editor{color:var(--dc-fg)!important}
+html[data-theme=dark] p,
+html[data-theme=dark] li,
+html[data-theme=dark] .breadcrumb a,
+html[data-theme=dark] .regular-price,
+html[data-theme=dark] .product-reference,
+html[data-theme=dark] .text-muted,
+html[data-theme=dark] .brand-title,
+html[data-theme=dark] .brand-title a{color:var(--dc-muted)!important}
+html[data-theme=dark] a:not(.btn):not(.elementor-button):hover{color:var(--dc-gold)!important}
+html[data-theme=dark] .avaorg-sub-inner a,
+html[data-theme=dark] [class*=avaorg-menu-col] a,
+html[data-theme=dark] #footer a,
+html[data-theme=dark] .block-categories a,
+html[data-theme=dark] .select-title{color:var(--dc-fg)!important}
+
+/* Formularios */
+html[data-theme=dark] input:not([type=submit]):not([type=checkbox]):not([type=radio]),
+html[data-theme=dark] select,
+html[data-theme=dark] textarea,
+html[data-theme=dark] .form-control{background-color:var(--dc-panel2)!important;color:var(--dc-fg)!important;border-color:var(--dc-line)!important}
+html[data-theme=dark] input::placeholder,html[data-theme=dark] textarea::placeholder{color:var(--dc-muted)!important}
+
+/* Líneas y separadores */
+html[data-theme=dark] hr,
+html[data-theme=dark] .product-miniature,
+html[data-theme=dark] .subcategory-item{border-color:var(--dc-line)!important}
+
+/* Las fotos de producto suelen tener fondo blanco: se les da un marco claro para que no "floten" */
+html[data-theme=dark] .product-thumbnail img,
+html[data-theme=dark] .product-cover img,
+html[data-theme=dark] .js-qv-product-images img{background:#fff;border-radius:6px}
+
+/* Página de contacto: bloque de información de la tienda */
+html[data-theme=dark] .contact-rich{background-color:var(--dc-panel)!important;color:var(--dc-fg)!important}
+html[data-theme=dark] .contact-rich .block{background-color:transparent!important}
+html[data-theme=dark] .contact-rich .data,
+html[data-theme=dark] .contact-rich a{color:var(--dc-fg)!important}
+
+/* Ficha de producto: precio, impuestos y selector de cantidad */
+html[data-theme=dark] .current-price-value,
+html[data-theme=dark] .current-price{color:#23f8fd!important}
+html[data-theme=dark] .tax-shipping-delivery-label,
+html[data-theme=dark] .product-discount,
+html[data-theme=dark] .product-availability{color:var(--dc-muted)!important}
+html[data-theme=dark] .btn-touchspin{background-color:var(--dc-panel2)!important;color:var(--dc-fg)!important;border-color:var(--dc-line)!important}

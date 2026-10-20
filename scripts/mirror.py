@@ -19,6 +19,7 @@ ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
 PAGES = [
     ("", "index.html"),
     ("12-cartas", "categoria-cartas.html"),
+    ("176-juegos-de-cartas", "categoria-tcg.html"),
     ("10-party-games", "categoria-party-games.html"),
     ("12379-the-goblin-king.html", "producto-ejemplo.html"),
     ("contacto", "contacto.html"),
@@ -116,6 +117,20 @@ def mark_copy(html):
     return html
 
 
+# Mejoras propias (site/dc/): se enlazan en todas las paginas copiadas
+MEJORAS_HEAD = '<script src="dc/dragonchamber.js"></script>'
+MEJORAS_CSS = '<link rel="stylesheet" href="dc/dragonchamber.css">'
+MEJORAS_BODY = '<script src="dc/asistente.js" defer></script>'
+
+
+def inject_mejoras(html):
+    if "dc/dragonchamber.js" in html:
+        return html
+    html = re.sub(r"<head[^>]*>", lambda m: m.group(0) + MEJORAS_HEAD, html, 1)
+    html = html.replace("</head>", MEJORAS_CSS + MEJORAS_BODY + "</head>", 1)
+    return html
+
+
 def mirror_page(path, out_name, page_map):
     url = urllib.parse.urljoin(BASE, path)
     print(f"-> {url}")
@@ -147,7 +162,7 @@ def mirror_page(path, out_name, page_map):
             out.append(" ".join(bits))
         return f'{attr}="{", ".join(out) if "srcset" in attr else out[0]}"'
 
-    html = mark_copy(ATTR_RE.sub(repl, html))
+    html = inject_mejoras(mark_copy(ATTR_RE.sub(repl, html)))
     with open(os.path.join(ROOT, out_name), "w", encoding="utf-8") as f:
         f.write(html)
 
@@ -158,7 +173,7 @@ def main():
             f = os.path.join(ROOT, out)
             if os.path.exists(f):
                 html = open(f, encoding="utf-8").read()
-                open(f, "w", encoding="utf-8").write(mark_copy(html))
+                open(f, "w", encoding="utf-8").write(inject_mejoras(mark_copy(html)))
         return
     os.makedirs(ROOT, exist_ok=True)
     page_map = {urllib.parse.urljoin(BASE, p): out for p, out in PAGES}
