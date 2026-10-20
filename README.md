@@ -9,11 +9,12 @@ para probar mejoras visuales poco a poco antes de pasarlas a la web real.
 
 | Carpeta | Qué hay |
 |---|---|
-| `site/` | Copia de la web (HTML, CSS, JS e imágenes del tema *Ebotic*). Es lo que se edita. |
-| `mejoras/` | Prototipos ya hechos: portada rediseñada, asistente virtual, cartas TCG y ficha de mejoras. |
+| `site/` | Copia de la web (HTML, CSS, JS e imágenes del tema *Ebotic*). |
+| `site/dc/` | **Mejoras aplicadas**: `dragonchamber.css` + `dragonchamber.js` (modo oscuro, slider con cartas, dorsos TCG) y `asistente.js`. Es lo que se edita y lo que luego se sube al tema real. |
+| `mejoras/` | Maquetas originales de las mejoras (artefactos). |
 | `scripts/mirror.py` | Script que vuelve a descargar la copia desde la web real. |
 
-Páginas copiadas: portada, categoría Cartas, categoría Party games, una ficha de producto,
+Páginas copiadas: portada, categoría Juegos de cartas (TCG), categoría Cartas, categoría Party games, una ficha de producto,
 contacto, sobre nosotros y envíos.
 
 ## Verlo en local
