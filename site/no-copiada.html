@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Página no incluida</title>
+<script src="dc/dragonchamber.js"></script>
+<link rel="stylesheet" href="dc/dragonchamber.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&family=Poppins:wght@400;600&display=swap">
+<style>
+:root{--bg:#f6f4fb;--fg:#1b1730;--muted:#5d5878;--panel:#e8e4f4;--gold:#8a6a10;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f0e1a;--fg:#ecebf5;--muted:#a6a2bf;--panel:#1a1830;--gold:#e5c04b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f0e1a;--fg:#ecebf5;--muted:#a6a2bf;--panel:#1a1830;--gold:#e5c04b;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 Poppins,system-ui,sans-serif}
+header{background:#08111f;padding:14px 16px;text-align:center}
+header a{font:800 22px Cinzel,serif;color:#23f8fd;text-decoration:none;letter-spacing:.04em}
+main{max-width:620px;margin:56px auto;padding:0 16px;text-align:center}
+h1{font:800 clamp(24px,5vw,34px)/1.2 Cinzel,serif;margin:0 0 12px}
+p{color:var(--muted);margin:0 auto 10px;max-width:52ch}
+code{background:var(--panel);padding:2px 8px;border-radius:6px;font-size:14px;word-break:break-all}
+.acc{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px}
+.acc a,.acc button{font:600 14px Poppins,sans-serif;border-radius:999px;padding:10px 20px;text-decoration:none;cursor:pointer}
+.pri{background:#1b1b2f;color:#f5d76e;border:0}
+html[data-theme=dark] .pri{background:#f5d76e;color:#1b1730}
+.sec{background:transparent;color:var(--fg);border:1px solid var(--muted)}
+.acc a:focus-visible,.acc button:focus-visible{outline:3px solid #c9a227;outline-offset:3px}
+</style>
+</head>
+<body>
+<div id="dc-copia" style="position:sticky;top:0;z-index:100000;background:#c9a227;color:#1b1730;font:600 13px/1.4 sans-serif;text-align:center;padding:6px 12px">Copia de pruebas, no es la tienda. Para comprar ve a <a href="https://thedragonchambergames.com/prestashop/" style="color:inherit">thedragonchambergames.com</a></div>
+<header><a href="index.html">THE DRAGON CHAMBER</a></header>
+<main>
+<h1 id="t">Esta página no está en el prototipo</h1>
+<p id="d">El prototipo copia la portada, las categorías, las marcas y las páginas informativas. Las fichas de producto, el carrito, la cuenta, el buscador y las páginas 2 y siguientes de cada listado no están incluidos.</p>
+<p id="r" hidden>Enlace original: <code id="u"></code></p>
+<div class="acc">
+<button class="pri" type="button" onclick="history.length>1?history.back():location.href='index.html'">Volver</button>
+<a class="sec" href="index.html">Ir a la portada</a>
+<a class="sec" id="real" href="https://thedragonchambergames.com/prestashop/" target="_blank" rel="noopener" hidden>Ver en la tienda real</a>
+</div>
+</main>
+<script>
+(function(){
+  var u = new URLSearchParams(location.search).get('u') || '';
+  // Solo rutas de la tienda: sin esquema ni dominio
+  if (!u || /^[a-z]+:|^\/\//i.test(u)) return;
+  if (/\.html$/.test(u.split('?')[0])) {
+    document.getElementById('t').textContent = 'Ficha de producto no incluida';
+    document.getElementById('d').textContent = 'El prototipo se centra en la estructura de categorías; los productos se quedan como están en la tienda real.';
+  }
+  document.getElementById('u').textContent = u;
+  document.getElementById('r').hidden = false;
+  var real = document.getElementById('real');
+  real.href = 'https://thedragonchambergames.com/prestashop/' + u;
+  real.hidden = false;
+})();
+</script>
+<script src="dc/paginas.js"></script>
+<script src="dc/asistente.js" defer></script>
+</body>
+</html>

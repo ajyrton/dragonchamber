@@ -41,7 +41,7 @@
     items.forEach(function (li) {
       var a = li.querySelector('.subcategory-image a');
       if (!a) return;
-      var m = (a.getAttribute('href') || '').match(/\/(\d+)-[^\/]*$/);
+      var m = (a.getAttribute('href') || '').match(/(?:^|\/)(\d+)-[^\/]*$/);
       if (!m || !BACKS[m[1]]) return;
       a.innerHTML = '<span class="dc-card">' + BACKS[m[1]] + '</span>';
       li.parentElement.classList.add('dc-tcg-list');

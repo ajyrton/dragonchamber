@@ -10,7 +10,13 @@
     tel:'624686658', wa:'https://wa.me/34624686658',
     mail:'clientes.dchg@gmail.com'
   };
-  function A(h,t){return '<a href="'+h+'" target="_blank" rel="noopener">'+t+'</a>'}
+  // En el prototipo (window.DC_PAGINAS, generado por scripts/mirror.py) los enlaces a la tienda
+  // apuntan a la copia local; en la tienda real se quedan como estan.
+  var LOCAL=window.DC_PAGINAS;
+  function A(h,t){
+    if(LOCAL&&h.indexOf(B)===0){var p=h.slice(B.length).replace(/\/$/,'');
+      return '<a href="'+(LOCAL[p]||'no-copiada.html?u='+encodeURIComponent(p))+'">'+t+'</a>'}
+    return '<a href="'+h+'" target="_blank" rel="noopener">'+t+'</a>'}
   var INTENTS=[
    {k:['hola','buenas','buenos dias','buenas tardes','hey'],a:'¡Hola! Soy el asistente de The Dragon Chamber. Puedo ayudarte con horarios, envíos, devoluciones, pagos y a encontrar productos. ¿Qué necesitas?'},
    {k:['horario','hora','abierto','abris','abren','cerrado','cuando abre'],a:'Abrimos <b>'+DATA.horario+'</b>.'},
@@ -78,7 +84,7 @@
     msgs.appendChild(f);msgs.scrollTop=msgs.scrollHeight}
   function ask(q){if(!q.trim())return;add('u',q,true);stat('preguntas');
     var r=answer(q);var m;
-    if(r){m=add('b',r);var fm=m.querySelector('form[data-s]');if(fm)fm.onsubmit=function(e){e.preventDefault();var v=fm.querySelector('input').value.trim();if(v)var l=document.createElement('a');l.href=B+'buscar?controller=search&s='+encodeURIComponent(v);l.target='_blank';l.rel='noopener';document.body.appendChild(l);l.click();l.remove()};feedback(q)}
+    if(r){m=add('b',r);var fm=m.querySelector('form[data-s]');if(fm)fm.onsubmit=function(e){e.preventDefault();var v=fm.querySelector('input').value.trim();if(v)var l=document.createElement('a');if(LOCAL){l.href='no-copiada.html?u='+encodeURIComponent('buscar?s='+v)}else{l.href=B+'buscar?controller=search&s='+encodeURIComponent(v);l.target='_blank';l.rel='noopener'};document.body.appendChild(l);l.click();l.remove()};feedback(q)}
     else{stat('sin_respuesta');add('b','No estoy seguro de haberte entendido. Puedes probar con otras palabras o hablar con una persona: '+A(DATA.wa,'WhatsApp')+' · '+DATA.tel+' · '+DATA.mail+'.')}}
   CHIPS.forEach(function(c){var b=document.createElement('button');b.type='button';b.textContent=c;b.onclick=function(){ask(CHIPQ[c])};chips.appendChild(b)});
   box.querySelector('form.dc-in').onsubmit=function(e){e.preventDefault();var v=inp.value;inp.value='';ask(v)};
