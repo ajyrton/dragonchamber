@@ -20,21 +20,61 @@
     var hand = hero.querySelector('.dc-hand');
     var actual = 0, timer = null, n = slides.length, mid = (n - 1) / 2;
 
+    var hover = -1;
     var cartas = slides.map(function (s, i) {
       var b = document.createElement('button');
       b.type = 'button';
-      b.className = 'dc-cardot';
+      b.className = 'dc-mcard';
       b.style.setProperty('--c', s.style.getPropertyValue('--c'));
-      // Abanico: cada carta gira un poco y baja hacia los extremos, como una mano
-      b.style.setProperty('--rot', ((i - mid) * 6) + 'deg');
-      b.style.setProperty('--drop', (Math.abs(i - mid) * Math.abs(i - mid) * 1.2) + 'px');
+      b.style.setProperty('--k', s.style.getPropertyValue('--k'));
       var titulo = s.querySelector('h2').textContent;
-      b.setAttribute('aria-label', 'Diapositiva ' + (i + 1) + ': ' + titulo);
-      b.innerHTML = (EMBLEMAS[s.dataset.emblema] || '') + '<span class="dc-cardot__nombre" aria-hidden="true">' + titulo + '</span>';
+      var img = s.querySelector('.dc-slide__img img');
+      b.setAttribute('aria-label', 'Diapositiva ' + (i + 1) + ' de ' + n + ': ' + titulo + ', ' + s.dataset.fecha);
+      // Carta completa en miniatura: gema (emblema), cinta con el título, arte, tipo y fecha
+      b.innerHTML = '<span class="dc-mcard__cara" aria-hidden="true">' +
+        '<span class="dc-mcard__cinta">' + s.dataset.corto + '</span>' +
+        '<span class="dc-mcard__arte"><img src="' + img.getAttribute('src') + '" alt="" loading="lazy"></span>' +
+        '<span class="dc-mcard__tipo">' + s.dataset.tipo + '</span>' +
+        '<span class="dc-mcard__fecha">' + s.dataset.fecha + '</span>' +
+        '</span><span class="dc-mcard__gema" aria-hidden="true">' + (EMBLEMAS[s.dataset.emblema] || '') + '</span>';
       b.addEventListener('click', function () { ir(i); reiniciar(); });
+      b.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { hover = i; colocarMano(); } });
+      b.addEventListener('pointerleave', function () { if (hover === i) { hover = -1; colocarMano(); } });
+      b.addEventListener('focus', function () { hover = i; colocarMano(); });
+      b.addEventListener('blur', function () { if (hover === i) { hover = -1; colocarMano(); } });
+      // Flechas para recorrer la mano con el teclado
+      b.addEventListener('keydown', function (e) {
+        var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (d) { e.preventDefault(); cartas[(i + d + n) % n].focus(); }
+      });
       hand.appendChild(b);
       return b;
     });
+
+    // Abanico: posición, giro y escala de cada carta según la seleccionada y la que tiene el ratón
+    function colocarMano() {
+      var movil = innerWidth < 768;
+      var paso = movil ? 44 : 80;          // separación entre cartas (se solapan)
+      var aparta = movil ? 22 : 46;        // cuánto se apartan las vecinas de la seleccionada
+      var sube = movil ? -52 : -74;        // cuánto sube la seleccionada
+      var escala = movil ? 1.45 : 1.45;
+      var ancho = cartas[0].offsetWidth;
+      var limite = hand.clientWidth / 2 - ancho * escala / 2 - 12; // la seleccionada no se sale por los lados
+      cartas.forEach(function (c, i) {
+        var d = i - mid;
+        var x = d * paso, y = d * d * (movil ? 2.5 : 4), r = d * 5, s = 1, z = 10 + i;
+        if (i < actual) x -= aparta; else if (i > actual) x += aparta;
+        if (hover >= 0 && hover !== actual && i !== hover) x += (i < hover ? -1 : 1) * (movil ? 8 : 16);
+        if (i === actual) { y = sube; r = 0; s = escala; z = 100; x = Math.max(-limite, Math.min(limite, x)); }
+        else if (i === hover) { y = y - (movil ? 18 : 30); r = 0; s = 1.12; z = 90; }
+        c.style.setProperty('--x', x + 'px');
+        c.style.setProperty('--y', y + 'px');
+        c.style.setProperty('--r', r + 'deg');
+        c.style.setProperty('--s', s);
+        c.style.zIndex = z;
+      });
+    }
+    addEventListener('resize', colocarMano);
 
     function ir(i) {
       actual = (i + n) % n;
@@ -45,6 +85,7 @@
         s.querySelectorAll('a, button').forEach(function (el) { el.tabIndex = on ? 0 : -1; });
       });
       cartas.forEach(function (c, j) { c.setAttribute('aria-current', j === actual ? 'true' : 'false'); });
+      colocarMano();
     }
     function siguiente() { ir(actual + 1); }
     function reiniciar() {
@@ -59,6 +100,10 @@
     hero.addEventListener('focusin', function () { clearInterval(timer); });
     hero.addEventListener('focusout', reiniciar);
     document.addEventListener('visibilitychange', function () { document.hidden ? clearInterval(timer) : reiniciar(); });
+    // Fuera de pantalla no avanza: el bucle solo corre mientras se ve
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) { es[0].isIntersecting ? reiniciar() : clearInterval(timer); }).observe(hero);
+    }
     // Deslizar con el dedo
     var x0 = null;
     hero.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });

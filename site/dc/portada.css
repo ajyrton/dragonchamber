@@ -31,10 +31,10 @@ body.dc-portada #wrapper .elementor-9 {
 
 /* ---------- 2. Slider de novedades ---------- */
 .dc-hero { position: relative; margin: 20px 0 0; border-radius: 12px; overflow: hidden; background: var(--dc-navy); }
-.dc-hero__slides { position: relative; min-height: clamp(420px, 34vw, 520px); }
+.dc-hero__slides { position: relative; min-height: clamp(520px, 40vw, 600px); }
 .dc-slide {
   position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: center;
-  gap: 32px; padding: 40px clamp(56px, 7vw, 110px) 120px; background: var(--c); color: #fff;
+  gap: 32px; padding: 36px clamp(56px, 7vw, 110px) 210px; background: var(--c); color: #fff;
   opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility 0s linear .6s;
 }
 .dc-slide.is-on { opacity: 1; visibility: visible; transition: opacity .6s ease; }
@@ -47,7 +47,7 @@ body.dc-portada #wrapper .elementor-9 {
   font-weight: 600; text-decoration: none !important; transition: transform .18s ease, background-color .18s;
 }
 .dc-slide__btn:hover { transform: translateY(-2px); background: #8ffcfe; }
-.dc-slide__img { position: relative; margin: 0; justify-self: center; width: min(100%, 340px); aspect-ratio: 1; padding: 16px;
+.dc-slide__img { position: relative; margin: 0; justify-self: center; width: min(100%, 280px); aspect-ratio: 1; padding: 14px;
   background: #fff; border-radius: 14px; transform: rotate(3deg); box-shadow: 0 18px 40px rgba(0, 0, 0, .35); }
 .dc-slide__img img { width: 100%; height: 100%; object-fit: contain; }
 .dc-slide__img--foto { width: min(100%, 460px); aspect-ratio: 4 / 3; padding: 10px 10px 30px; }
@@ -63,31 +63,50 @@ body.dc-portada #wrapper .elementor-9 {
 .dc-hero__arrow--prev { left: 14px; } .dc-hero__arrow--next { right: 14px; }
 .dc-hero button:focus-visible, .dc-hero a:focus-visible { outline: 3px solid var(--dc-gold); outline-offset: 3px; }
 
-/* La mano de cartas: una carta por diapositiva, en abanico y con aire entre ellas */
-.dc-hand { position: absolute; left: 0; right: 0; bottom: 22px; z-index: 3; display: flex; justify-content: center; align-items: flex-end; gap: 14px; height: 96px; }
-.dc-cardot {
-  --rot: 0deg; --drop: 0px;
-  position: relative; width: 46px; height: 64px; padding: 0; border: 2px solid #c9a227; border-radius: 7px; cursor: pointer;
-  background: var(--c); opacity: .8; transform-origin: 50% 120%;
-  transform: translateY(var(--drop)) rotate(var(--rot));
-  box-shadow: 0 4px 10px rgba(0, 0, 0, .45);
-  transition: transform .4s cubic-bezier(.16, 1, .3, 1), opacity .3s, box-shadow .3s, filter .3s;
+/* ---------- La mano de cartas (estilo Slay the Spire) ----------
+   Cartas completas en miniatura, solapadas en abanico y cortadas por el borde inferior.
+   La seleccionada sube, se endereza, crece y aparta a las vecinas. Posiciones calculadas en portada.js. */
+.dc-hand { position: absolute; left: 0; right: 0; bottom: 0; height: 0; z-index: 3; }
+.dc-mcard {
+  --w: 124px; --x: 0px; --y: 0px; --r: 0deg; --s: 1;
+  position: absolute; left: 50%; bottom: -46px; width: var(--w); aspect-ratio: 5 / 7; padding: 0; border: 0; cursor: pointer;
+  background: none; color: #fff; font-family: Poppins, sans-serif; text-align: left;
+  transform-origin: 50% 100%;
+  transform: translateX(-50%) translate(var(--x), var(--y)) rotate(var(--r)) scale(var(--s));
+  transition: transform .42s cubic-bezier(.16, 1, .3, 1);
 }
-.dc-cardot::before { content: ""; position: absolute; inset: 4px; border: 1px solid rgba(245, 215, 110, .7); border-radius: 4px; }
-.dc-cardot svg { position: absolute; inset: 8px; width: calc(100% - 16px); height: calc(100% - 16px); }
-.dc-cardot:hover { opacity: 1; transform: translateY(calc(var(--drop) - 8px)) rotate(var(--rot)); }
-.dc-cardot[aria-current="true"] {
-  opacity: 1; border-color: #f5d76e; filter: brightness(1.2); z-index: 2;
-  transform: translateY(-18px) rotate(0deg) scale(1.15);
-  animation: dc-brillo 1.8s ease-in-out infinite alternate;
+.dc-mcard__cara {
+  position: absolute; inset: 0; display: flex; flex-direction: column; border-radius: 10px; overflow: hidden;
+  background: var(--c); border: 3px solid #c9a227; box-shadow: 0 8px 18px rgba(0, 0, 0, .45);
+  transition: box-shadow .3s, border-color .3s;
 }
-.dc-cardot__nombre { position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%); white-space: nowrap;
-  background: var(--dc-navy); color: #fff; font-size: 13px; padding: 3px 8px; border-radius: 4px; opacity: 0; pointer-events: none; transition: opacity .2s; }
-.dc-cardot:hover .dc-cardot__nombre, .dc-cardot:focus-visible .dc-cardot__nombre { opacity: 1; }
-@keyframes dc-brillo {
-  from { box-shadow: 0 10px 18px rgba(0, 0, 0, .55), 0 0 8px 1px rgba(245, 215, 110, .5); }
-  to { box-shadow: 0 10px 18px rgba(0, 0, 0, .55), 0 0 18px 5px rgba(245, 215, 110, .95); }
+.dc-mcard__cinta { margin: 9px 6px 0 18px; padding: 3px 6px; border-radius: 4px; background: rgba(0, 0, 0, .35);
+  font-size: 10px; font-weight: 700; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--k); }
+.dc-mcard__arte { flex: 1; margin: 5px 6px 0; border-radius: 4px; background: #fff; overflow: hidden; }
+.dc-mcard__arte img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.dc-mcard__tipo { align-self: center; margin-top: -8px; padding: 1px 7px; border-radius: 3px; background: #1b1b2f; color: #e9eef3; font-size: 9px; font-weight: 600; }
+.dc-mcard__fecha { padding: 4px 6px 8px; font-size: 10px; font-weight: 600; text-align: center; line-height: 1.2; color: #fff; }
+.dc-mcard__gema {
+  position: absolute; left: -8px; top: -8px; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+  background: #1b1b2f; border: 2px solid #c9a227; z-index: 2;
 }
+.dc-mcard__gema svg { width: 16px; height: 22px; }
+/* Seleccionada: brillo de carta jugable */
+.dc-mcard[aria-current="true"] .dc-mcard__cara {
+  border-color: #f5d76e;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, .5), 0 0 0 3px rgba(35, 248, 253, .9), 0 0 22px 6px rgba(35, 248, 253, .55);
+}
+.dc-mcard:focus-visible { outline: none; }
+.dc-mcard:focus-visible .dc-mcard__cara { box-shadow: 0 0 0 3px #c9a227, 0 0 0 6px #fff; }
+@media (max-width: 767px) {
+  .dc-mcard { --w: 74px; bottom: -34px; }
+  .dc-mcard__cinta { font-size: 8px; margin: 6px 4px 0 14px; padding: 2px 4px; }
+  .dc-mcard__tipo { display: none; }
+  .dc-mcard__fecha { font-size: 8px; padding: 3px 4px 6px; }
+  .dc-mcard__gema { width: 24px; height: 24px; left: -6px; top: -6px; }
+  .dc-mcard__gema svg { width: 13px; height: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .dc-mcard { transition: none; } }
 
 /* ---------- 3. De tu pedido a tu mesa ---------- */
 .dc-pedido {
@@ -171,14 +190,11 @@ html[data-theme=dark] .dc-ticket__btn { background: var(--dc-cyan); color: var(-
 @media (max-width: 767px) {
   body.dc-portada { background-image: none !important; }
   .dc-hero { margin: 10px 0 0; border-radius: 0; }
-  .dc-hero__slides { min-height: 620px; }
-  .dc-slide { grid-template-columns: 1fr; padding: 28px 20px 120px; gap: 18px; align-content: start; }
-  .dc-slide__img { width: 180px; order: -1; justify-self: start; transform: rotate(-3deg); }
+  .dc-hero__slides { min-height: 700px; }
+  .dc-slide { grid-template-columns: 1fr; padding: 28px 20px 170px; gap: 18px; align-content: start; }
+  .dc-slide__img { width: 150px; order: -1; justify-self: start; transform: rotate(-3deg); }
   .dc-slide h2 { font-size: 26px; }
   .dc-hero__arrow { display: none; }
-  .dc-hand { gap: 8px; }
-  .dc-hand { gap: 6px; }
-  .dc-cardot { width: 44px; height: 60px; }
   .dc-ruta { margin: 0 24px; }
   .dc-ruta__paradas button { font-size: 0; gap: 0; min-width: 44px; min-height: 44px; justify-content: flex-start; }
   .dc-ruta__paradas button.is-aqui { font-size: 12px; gap: 6px; }
@@ -196,8 +212,7 @@ html[data-theme=dark] .dc-ticket__btn { background: var(--dc-cyan); color: var(-
   @keyframes dc-flota { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
 }
 @media (prefers-reduced-motion: reduce) {
-  .dc-slide, .dc-cardot, .dc-dragon:not(.is-arrastrando) { transition: none; }
-  .dc-cardot[aria-current="true"] { animation: none; }
+  .dc-slide, .dc-dragon:not(.is-arrastrando) { transition: none; }
 }
 
 /* ---------- 5. Juegos de cartas: dorsos con enlace ---------- */
@@ -262,6 +277,6 @@ html[data-theme=dark] body.dc-portada .dc-pedido__head p,
 html[data-theme=dark] body.dc-portada .dc-ticket dd.d { color: var(--dc-soft) !important; }
 /* Foco visible y selección con los colores de la marca */
 .dc-ruta__paradas button:focus-visible, .dc-ticket__btn:focus-visible, .dc-pasos:focus-visible,
-.dc-hero__arrow:focus-visible, .dc-cardot:focus-visible { outline: 3px solid var(--dc-gold); outline-offset: 3px; }
+.dc-hero__arrow:focus-visible { outline: 3px solid var(--dc-gold); outline-offset: 3px; }
 body.dc-portada ::selection { background: var(--dc-cyan); color: var(--dc-navy); }
 .dc-ticket__btn:active, .dc-slide__btn:active { transform: translateY(1px); }
