@@ -199,14 +199,15 @@ html[data-theme=dark] .dc-ticket__btn { background: var(--dc-cyan); color: var(-
 /* ---------- 5. Juegos de cartas: dorsos con enlace ---------- */
 .dc-tcg { margin: 10px 15px 50px; text-align: center; }
 .dc-tcg .dc-h2 { margin-bottom: 28px; }
-.dc-tcg__row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px; perspective: 1000px; }
+.dc-tcg__row { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; perspective: 1000px; }
 .dc-tcgcard { display: flex; flex-direction: column; align-items: center; gap: 14px; text-decoration: none !important; color: var(--dc-ink) !important; }
 .dc-tcgcard__card {
   position: relative; display: block; width: min(100%, 210px); aspect-ratio: 5 / 7; border-radius: 12px; overflow: hidden;
   transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .2s, box-shadow .2s;
   box-shadow: 0 12px 24px rgba(0, 0, 0, .3);
 }
-.dc-tcgcard__card svg { display: block; width: 100%; height: 100%; }
+.dc-tcgcard__card svg, .dc-tcgcard__card img { display: block; width: 100%; height: 100%; }
+.dc-tcgcard__card img { object-fit: cover; }
 .dc-tcgcard__card::after {
   content: ""; position: absolute; inset: 0; opacity: 0; transition: opacity .2s; pointer-events: none; mix-blend-mode: overlay;
   background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, .6), transparent 45%),
