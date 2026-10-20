@@ -260,6 +260,9 @@ def main():
     with open(os.path.join(ROOT, "dc", "paginas.js"), "w", encoding="utf-8") as f:
         f.write("window.DC_PAGINAS=" + json.dumps({p: (nombre_local(p) if p else "index.html") for p in sorted(copiadas)}, ensure_ascii=False) + ";\n")
     print(f"Listo: {len(copiadas)} paginas y {len([v for v in _cache.values() if v])} assets en {ROOT}")
+    # La portada (site/index.html) se genera a partir de la original con los añadidos propios
+    import runpy
+    runpy.run_path(os.path.join(os.path.dirname(os.path.abspath(__file__)), "portada.py"), run_name="__main__")
 
 
 if __name__ == "__main__":

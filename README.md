@@ -23,21 +23,22 @@ igual que el carrito, la cuenta, el buscador o la página 2 de un listado, lleva
 `site/no-copiada.html`, así que la navegación nunca sale del prototipo. Las fotos de producto se
 cargan desde la tienda real.
 
-## Portada rediseñada
+## Portada
 
-`site/index.html` es la portada nueva, hecha a mano (no la toca `mirror.py`). La copia de la portada
-actual está en `site/portada-original.html` para comparar. Archivos propios: `site/dc/inicio.css`,
-`site/dc/inicio.js` y las fotos en `site/dc/img/`.
+`site/index.html` se genera con `python scripts/portada.py` a partir de la copia de la portada
+original (`site/portada-original.html`); `mirror.py` lo hace solo al terminar. Sobre la original:
 
-- **Idea:** la tienda es una carta coleccionable. La portada es la carta de The Dragon Chamber y el
-  catálogo se presenta en seis mazos (Juegos de mesa, Cartas, Warhammer y wargames, Pintura y
-  modelismo, Rol y libros, Accesorios de juego).
-- **En vivo:** la carta dice si la tienda está abierta ahora (hora de Almería) y a qué hora se puede
-  recoger un pedido hecho en ese momento (recogida en 2 h de tienda abierta).
-- **Reutiliza:** modo oscuro, dorsos TCG con inclinación, cartas como indicador (los lomos del mazo)
-  y el asistente del dragón.
-- **Fotos:** banners e Instagram de la propia tienda; la Alcazaba es de Wikimedia Commons (CC0,
-  Jebulon). Créditos en `docs/creditos-imagenes.json`.
+- **Slider de novedades y eventos** (`scripts/portada/slider.html`): sustituye al slider original.
+  Siete diapositivas (eventos en tienda y la última o próxima expansión de cada TCG) y, como
+  indicadores, una mano de cartas en abanico.
+- **De tu pedido a tu mesa** (`scripts/portada/pedido.html`): un dragoncito lleva tu paquete; se
+  arrastra por la ruta (o con las flechas del teclado) y la fila de fotos le sigue.
+- **Ticket "Comprar aquí"**: compacto, con botón para ver todas las condiciones.
+- **Fondo dividido**: a la izquierda una partida de cartas y a la derecha la mesa de pintura con
+  Warhammer; se ve a los lados en pantallas de más de 1510 px.
+
+Estilos y comportamiento: `site/dc/portada.css` y `site/dc/portada.js`. **Las fechas del slider hay
+que revisarlas a mano**: están escritas en `scripts/portada/slider.html`.
 
 ## Verlo en local
 

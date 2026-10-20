@@ -1,0 +1,193 @@
+/* The Dragon Chamber · añadidos de la portada (sobre el tema Ebotic)
+   1. Fondo dividido   2. Slider de novedades con la mano de cartas   3. De tu pedido a tu mesa (dragón)
+   4. Ticket "Comprar aquí"   Modo oscuro: html[data-theme=dark] (botón de dragonchamber.js) */
+
+body.dc-portada {
+  --dc-navy: #08111f; --dc-cyan: #23f8fd; --dc-cyan-2: #00c4f1; --dc-gold: #c9a227;
+  --dc-panel: #fff; --dc-ink: #1b1b2f; --dc-soft: #5d5878; --dc-paper: #f6f4fb; --dc-line: #d4cee6;
+}
+html[data-theme=dark] body.dc-portada {
+  --dc-panel: #0f0e1a; --dc-ink: #ecebf5; --dc-soft: #a6a2bf; --dc-paper: #1a1830; --dc-line: #2e2b4a;
+}
+
+/* ---------- 1. Fondo dividido: a la izquierda TCG, a la derecha pintura y Warhammer ---------- */
+body.dc-portada {
+  background-color: var(--dc-navy) !important;
+  background-image: url("img/fondo-tcg.jpg"), url("img/sala-pintura.jpg") !important;
+  background-size: 50vw 100vh, 50vw 100vh !important;
+  background-position: left top, right top !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+html body.dc-portada #wrapper,
+html body.dc-portada #main,
+html body.dc-portada #content-wrapper,
+html body.dc-portada #hero_section { background: transparent !important; }
+body.dc-portada #wrapper .elementor-9 {
+  max-width: 1470px; margin: 0 auto; padding: 0 20px 40px; background: var(--dc-panel);
+}
+/* La foto de la derecha (sala-pintura) ya trae su degradado a la izquierda; la de TCG se oscurece un poco */
+@media (max-width: 1510px) { body.dc-portada #wrapper .elementor-9 { padding: 0 0 40px; } }
+
+/* ---------- 2. Slider de novedades ---------- */
+.dc-hero { position: relative; margin: 20px 0 0; border-radius: 12px; overflow: hidden; background: var(--dc-navy); }
+.dc-hero__slides { position: relative; min-height: clamp(420px, 34vw, 520px); }
+.dc-slide {
+  position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: center;
+  gap: 32px; padding: 40px clamp(56px, 7vw, 110px) 120px; background: var(--c); color: #fff;
+  opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility 0s linear .6s;
+}
+.dc-slide.is-on { opacity: 1; visibility: visible; transition: opacity .6s ease; }
+.dc-slide__txt { position: relative; max-width: 560px; }
+.dc-slide__when { margin: 0 0 10px; color: var(--k); font-weight: 600; font-size: 15px; letter-spacing: .02em; }
+.dc-slide h2 { margin: 0 0 14px; color: #fff; font-family: Belleza, Poppins, sans-serif; font-weight: 600; font-size: clamp(28px, 3vw, 44px); line-height: 1.1; }
+.dc-slide__txt > p:not(.dc-slide__when) { margin: 0 0 22px; color: rgba(255, 255, 255, .9); font-size: 16px; line-height: 1.55; }
+.dc-slide__btn {
+  display: inline-block; padding: 12px 26px; border-radius: 6px; background: var(--dc-cyan); color: var(--dc-navy) !important;
+  font-weight: 600; text-decoration: none !important; transition: transform .18s ease, background-color .18s;
+}
+.dc-slide__btn:hover { transform: translateY(-2px); background: #8ffcfe; }
+.dc-slide__img { position: relative; margin: 0; justify-self: center; width: min(100%, 340px); aspect-ratio: 1; padding: 16px;
+  background: #fff; border-radius: 14px; transform: rotate(3deg); box-shadow: 0 18px 40px rgba(0, 0, 0, .35); }
+.dc-slide__img img { width: 100%; height: 100%; object-fit: contain; }
+
+.dc-hero__arrow {
+  position: absolute; top: 42%; z-index: 3; width: 44px; height: 44px; border-radius: 50%; border: 0; cursor: pointer;
+  background: rgba(255, 255, 255, .14); color: #fff; font-size: 30px; line-height: 40px; transition: background-color .18s;
+}
+.dc-hero__arrow:hover { background: var(--dc-cyan); color: var(--dc-navy); }
+.dc-hero__arrow--prev { left: 14px; } .dc-hero__arrow--next { right: 14px; }
+.dc-hero button:focus-visible, .dc-hero a:focus-visible { outline: 3px solid var(--dc-gold); outline-offset: 3px; }
+
+/* La mano de cartas: una carta por diapositiva, en abanico y con aire entre ellas */
+.dc-hand { position: absolute; left: 0; right: 0; bottom: 22px; z-index: 3; display: flex; justify-content: center; align-items: flex-end; gap: 14px; height: 96px; }
+.dc-cardot {
+  --rot: 0deg; --drop: 0px;
+  position: relative; width: 46px; height: 64px; padding: 0; border: 2px solid #c9a227; border-radius: 7px; cursor: pointer;
+  background: var(--c); opacity: .8; transform-origin: 50% 120%;
+  transform: translateY(var(--drop)) rotate(var(--rot));
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .45);
+  transition: transform .35s cubic-bezier(.2, .9, .3, 1.3), opacity .3s, box-shadow .3s, filter .3s;
+}
+.dc-cardot::before { content: ""; position: absolute; inset: 4px; border: 1px solid rgba(245, 215, 110, .7); border-radius: 4px; }
+.dc-cardot svg { position: absolute; inset: 8px; width: calc(100% - 16px); height: calc(100% - 16px); }
+.dc-cardot:hover { opacity: 1; transform: translateY(calc(var(--drop) - 8px)) rotate(var(--rot)); }
+.dc-cardot[aria-current="true"] {
+  opacity: 1; border-color: #f5d76e; filter: brightness(1.2); z-index: 2;
+  transform: translateY(-18px) rotate(0deg) scale(1.15);
+  animation: dc-brillo 1.8s ease-in-out infinite alternate;
+}
+.dc-cardot__nombre { position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%); white-space: nowrap;
+  background: var(--dc-navy); color: #fff; font-size: 13px; padding: 3px 8px; border-radius: 4px; opacity: 0; pointer-events: none; transition: opacity .2s; }
+.dc-cardot:hover .dc-cardot__nombre, .dc-cardot:focus-visible .dc-cardot__nombre { opacity: 1; }
+@keyframes dc-brillo {
+  from { box-shadow: 0 10px 18px rgba(0, 0, 0, .55), 0 0 8px 1px rgba(245, 215, 110, .5); }
+  to { box-shadow: 0 10px 18px rgba(0, 0, 0, .55), 0 0 18px 5px rgba(245, 215, 110, .95); }
+}
+
+/* ---------- 3. De tu pedido a tu mesa ---------- */
+.dc-pedido {
+  display: grid; grid-template-columns: minmax(0, 1fr) 340px; grid-template-areas: "head head" "ruta ticket" "pasos ticket";
+  column-gap: 40px; margin: 60px 15px 50px; color: var(--dc-ink);
+}
+.dc-pedido__head { grid-area: head; margin-bottom: 26px; }
+.dc-h2 { margin: 0 0 6px; font-family: Belleza, Poppins, sans-serif; font-weight: 600; font-size: 30px; text-transform: uppercase; color: var(--dc-ink); }
+.dc-pedido__head p { margin: 0; color: var(--dc-soft); font-size: 16px; }
+
+.dc-ruta { grid-area: ruta; position: relative; height: 150px; margin: 0 40px; touch-action: pan-y; }
+.dc-ruta__linea { position: absolute; left: 0; right: 0; top: 104px; height: 6px; border-radius: 3px; background: var(--dc-line); }
+.dc-ruta__hecho { display: block; height: 100%; width: 0; border-radius: 3px; background: var(--dc-cyan-2); }
+.dc-ruta__paradas { list-style: none; margin: 0; padding: 0; position: absolute; left: 0; right: 0; top: 96px; height: 50px; }
+.dc-ruta__paradas li { position: absolute; top: 0; transform: translateX(-50%); }
+.dc-ruta__paradas button {
+  display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0; border: 0; background: none; cursor: pointer;
+  color: var(--dc-soft); font: 500 13px Poppins, sans-serif; white-space: nowrap;
+}
+.dc-ruta__paradas button::before { content: ""; width: 22px; height: 22px; border-radius: 50%; background: var(--dc-panel); border: 4px solid var(--dc-line); transition: border-color .2s, transform .2s; }
+.dc-ruta__paradas button.is-hecho::before { border-color: var(--dc-cyan-2); }
+.dc-ruta__paradas button.is-aqui { color: var(--dc-ink); font-weight: 600; }
+.dc-ruta__paradas button.is-aqui::before { transform: scale(1.2); background: var(--dc-cyan-2); border-color: var(--dc-cyan-2); }
+.dc-ruta__paradas button:hover::before { transform: scale(1.2); }
+
+.dc-dragon {
+  position: absolute; top: 0; left: 0; width: 120px; height: 96px; margin-left: -60px; cursor: grab; touch-action: none; z-index: 2;
+  transform: translateX(var(--x, 0px));
+}
+.dc-dragon:active, .dc-dragon.is-arrastrando { cursor: grabbing; }
+.dc-dragon:focus-visible { outline: 3px solid var(--dc-gold); outline-offset: 2px; border-radius: 12px; }
+.dc-dragon svg { width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 6px 6px rgba(0, 0, 0, .3)); }
+.dc-dragon:not(.is-arrastrando) { transition: transform .45s cubic-bezier(.2, .8, .2, 1); }
+.dc-dragon.mira-izq svg { transform: scaleX(-1); }
+.dc-dragon__ala { transform-origin: 62px 36px; }
+.dc-dragon__cuerpo, .dc-dragon__paquete { transform-origin: 52px 70px; }
+
+.dc-pasos {
+  grid-area: pasos; list-style: none; margin: 10px 0 0; padding: 0 0 6px; display: flex; gap: 22px;
+  overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+}
+.dc-pasos::-webkit-scrollbar { display: none; }
+.dc-pasos li { flex: 0 0 230px; scroll-snap-align: start; opacity: .55; transition: opacity .3s, transform .3s; }
+.dc-pasos li.is-aqui { opacity: 1; transform: translateY(-6px); }
+.dc-pasos img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px; }
+.dc-pasos h3 { margin: 12px 0 4px; font: 600 17px Poppins, sans-serif; color: var(--dc-ink); }
+.dc-pasos p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--dc-soft); }
+
+/* ---------- 4. Ticket "Comprar aquí" ---------- */
+.dc-ticket {
+  grid-area: ticket; align-self: start; position: relative; background: var(--dc-paper); color: var(--dc-ink);
+  padding: 30px 24px 26px; font-size: 14px;
+  --z: 10px;
+  clip-path: polygon(0 var(--z), 5% 0, 10% var(--z), 15% 0, 20% var(--z), 25% 0, 30% var(--z), 35% 0, 40% var(--z), 45% 0, 50% var(--z), 55% 0, 60% var(--z), 65% 0, 70% var(--z), 75% 0, 80% var(--z), 85% 0, 90% var(--z), 95% 0, 100% var(--z),
+    100% calc(100% - var(--z)), 95% 100%, 90% calc(100% - var(--z)), 85% 100%, 80% calc(100% - var(--z)), 75% 100%, 70% calc(100% - var(--z)), 65% 100%, 60% calc(100% - var(--z)), 55% 100%, 50% calc(100% - var(--z)), 45% 100%, 40% calc(100% - var(--z)), 35% 100%, 30% calc(100% - var(--z)), 25% 100%, 20% calc(100% - var(--z)), 15% 100%, 10% calc(100% - var(--z)), 5% 100%, 0 calc(100% - var(--z)));
+}
+.dc-ticket__t { margin: 0 0 16px; text-align: center; font-family: Belleza, Poppins, sans-serif; font-weight: 600; font-size: 24px; text-transform: uppercase; color: var(--dc-ink); }
+.dc-ticket h3 { margin: 18px 0 8px; font: 600 15px Poppins, sans-serif; color: var(--dc-ink); }
+.dc-ticket dl { margin: 0; display: grid; gap: 10px; }
+.dc-ticket dl > div { display: grid; grid-template-columns: auto minmax(16px, 1fr) auto; align-items: baseline; column-gap: 8px; }
+.dc-ticket dl > div::after { content: ""; grid-column: 2; grid-row: 1; border-bottom: 3px dotted var(--dc-soft); transform: translateY(-3px); opacity: .7; }
+.dc-ticket dt { font-weight: 500; }
+.dc-ticket dd { grid-column: 3; grid-row: 1; margin: 0; font-weight: 600; text-align: right; }
+.dc-ticket dd.d { grid-column: 1 / -1; grid-row: 2; margin-top: 2px; font-weight: 400; text-align: left; color: var(--dc-soft); font-size: 13px; }
+.dc-ticket__mas { margin-top: 6px; }
+.dc-ticket__links { margin: 16px 0 0; font-size: 13px; }
+.dc-ticket__btn {
+  display: block; width: 100%; margin-top: 18px; padding: 10px; border: 0; border-radius: 6px; cursor: pointer;
+  background: var(--dc-navy); color: var(--dc-cyan); font: 600 14px Poppins, sans-serif; transition: transform .18s, background-color .18s;
+}
+html[data-theme=dark] .dc-ticket__btn { background: var(--dc-cyan); color: var(--dc-navy); }
+.dc-ticket__btn:hover { transform: translateY(-2px); }
+
+/* ---------- Tableta y móvil ---------- */
+@media (max-width: 991px) {
+  .dc-pedido { grid-template-columns: 1fr; grid-template-areas: "head" "ruta" "pasos" "ticket"; }
+  .dc-ticket { margin-top: 30px; justify-self: center; width: min(100%, 380px); }
+}
+@media (max-width: 767px) {
+  body.dc-portada { background-image: none !important; }
+  .dc-hero { margin: 10px 0 0; border-radius: 0; }
+  .dc-hero__slides { min-height: 620px; }
+  .dc-slide { grid-template-columns: 1fr; padding: 28px 20px 120px; gap: 18px; align-content: start; }
+  .dc-slide__img { width: 180px; order: -1; justify-self: start; transform: rotate(-3deg); }
+  .dc-slide h2 { font-size: 26px; }
+  .dc-hero__arrow { display: none; }
+  .dc-hand { gap: 8px; }
+  .dc-cardot { width: 36px; height: 50px; }
+  .dc-ruta { margin: 0 24px; }
+  .dc-ruta__paradas button { font-size: 0; gap: 0; }
+  .dc-ruta__paradas button.is-aqui { font-size: 12px; gap: 6px; }
+  .dc-pasos li { flex-basis: 70vw; }
+  .dc-pedido { margin: 40px 15px; }
+}
+
+/* ---------- Movimiento ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .dc-dragon.is-volando .dc-dragon__ala { animation: dc-aleteo .25s ease-in-out infinite alternate; }
+  .dc-dragon .dc-dragon__ala { animation: dc-aleteo 1.2s ease-in-out infinite alternate; }
+  .dc-dragon__cuerpo, .dc-dragon__paquete { animation: dc-flota 2.6s ease-in-out infinite; }
+  @keyframes dc-aleteo { from { transform: rotate(0); } to { transform: rotate(-16deg); } }
+  @keyframes dc-flota { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dc-slide, .dc-cardot, .dc-dragon:not(.is-arrastrando) { transition: none; }
+  .dc-cardot[aria-current="true"] { animation: none; }
+}

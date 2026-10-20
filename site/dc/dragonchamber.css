@@ -146,3 +146,9 @@ html[data-theme=dark] .tax-shipping-delivery-label,
 html[data-theme=dark] .product-discount,
 html[data-theme=dark] .product-availability{color:var(--dc-muted)!important}
 html[data-theme=dark] .btn-touchspin{background-color:var(--dc-panel2)!important;color:var(--dc-fg)!important;border-color:var(--dc-line)!important}
+
+/* Pestañas de productos y título del carrito */
+html[data-theme=dark] .widget-tab-title,
+html[data-theme=dark] .widget-tab-title .text,
+html[data-theme=dark] .elementor-cart__title{color:var(--dc-fg)!important}
+html[data-theme=dark] .widget-tab-title.active .text{color:#23f8fd!important}

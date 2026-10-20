@@ -1,0 +1,86 @@
+<!-- De tu pedido a tu mesa: el dragoncito lleva tu paquete; arrástralo por la ruta.
+     Debajo, el ticket de "Comprar aquí", compacto y ampliable. -->
+<section class="dc-pedido" aria-labelledby="dc-pedido-t">
+  <div class="dc-pedido__head">
+    <h2 id="dc-pedido-t" class="dc-h2">De tu pedido a tu mesa</h2>
+    <p>Arrastra al dragón y acompaña a tu paquete hasta casa.</p>
+  </div>
+
+  <div class="dc-ruta">
+    <div class="dc-ruta__linea" aria-hidden="true"><span class="dc-ruta__hecho"></span></div>
+    <ol class="dc-ruta__paradas">
+      <li><button type="button" data-paso="0">Lo eliges</button></li>
+      <li><button type="button" data-paso="1">Lo pagas</button></li>
+      <li><button type="button" data-paso="2">Lo preparamos</button></li>
+      <li><button type="button" data-paso="3">Recogida</button></li>
+      <li><button type="button" data-paso="4">Envío</button></li>
+      <li><button type="button" data-paso="5">Preventas</button></li>
+      <li><button type="button" data-paso="6">¡A tu mesa!</button></li>
+    </ol>
+    <div class="dc-dragon" role="slider" tabindex="0" aria-label="Dragón con tu paquete: arrástralo para avanzar" aria-valuemin="1" aria-valuemax="7" aria-valuenow="1" aria-valuetext="Lo eliges">
+      <svg viewBox="0 0 120 96" aria-hidden="true">
+        <g class="dc-dragon__cuerpo">
+          <path class="dc-dragon__cola" d="M30 62 Q8 66 6 50 Q14 58 30 54Z" fill="#2f7d55"/>
+          <g class="dc-dragon__ala"><path d="M50 40 Q40 8 64 4 Q60 22 70 36Z" fill="#6a3aa8" stroke="#4a2680" stroke-width="1.5"/></g>
+          <ellipse cx="52" cy="54" rx="24" ry="16" fill="#3a9468"/>
+          <ellipse cx="54" cy="60" rx="14" ry="9" fill="#e8d9a0"/>
+          <circle cx="82" cy="38" r="15" fill="#3a9468"/>
+          <ellipse cx="94" cy="42" rx="10" ry="7" fill="#4fae7e"/>
+          <circle cx="99" cy="41" r="1.4" fill="#1d4d36"/>
+          <polygon points="76,25 78,12 84,24" fill="#e8d9a0"/>
+          <circle cx="85" cy="34" r="4.2" fill="#fff8d6"/><circle cx="86" cy="34.5" r="2.2" fill="#2a1a4a"/>
+          <circle cx="85" cy="34" r="6.5" fill="none" stroke="#c9a227" stroke-width="1.4"/>
+          <polygon points="70,26 82,10 92,26 86,24 82,18 76,24" fill="#4a2680" stroke="#c9a227" stroke-width="1"/>
+          <path d="M44 68 L42 76 M60 68 L62 76" stroke="#2f7d55" stroke-width="4" stroke-linecap="round"/>
+        </g>
+        <g class="dc-dragon__paquete">
+          <path d="M42 76 L42 82 M62 76 L62 82" stroke="#8a6a10" stroke-width="1.5"/>
+          <rect x="34" y="80" width="36" height="14" rx="2" fill="#b07a3a" stroke="#7a5124" stroke-width="1.5"/>
+          <rect x="49" y="80" width="6" height="14" fill="#e8d9a0"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <ol class="dc-pasos" tabindex="0" aria-label="Pasos de tu pedido">
+    <li><img src="dc/img/tienda-1.jpg" width="640" height="800" loading="lazy" alt="Fotograma de un vídeo de la tienda en Instagram"><h3>Lo eliges</h3><p>En la web o en la tienda. Si no lo encuentras, pregúntanos por WhatsApp y lo buscamos.</p></li>
+    <li><img src="dc/img/tienda-4.jpg" width="640" height="800" loading="lazy" alt="Fotograma de un vídeo de la tienda en Instagram: una partida de cartas"><h3>Lo pagas</h3><p>Con tarjeta, Bizum, transferencia o PayPal. Siempre en euros y con pago seguro.</p></li>
+    <li><img src="dc/img/tienda-3.jpg" width="640" height="800" loading="lazy" alt="Fotograma de un vídeo de la tienda en Instagram"><h3>Lo preparamos</h3><p>Si está en tienda, lo apartamos con tu nombre en el momento.</p></li>
+    <li><img src="dc/img/tienda-6.jpg" width="640" height="800" loading="lazy" alt="Fotograma de un vídeo de la tienda en Instagram: las mesas de juego"><h3>Recógelo en 2 horas</h3><p>En C/ Hermanos Pinzón, 54, dentro del horario de la tienda.</p></li>
+    <li><img src="dc/img/tienda-5.jpg" width="640" height="800" loading="lazy" alt="Fotograma de un vídeo de la tienda en Instagram"><h3>O te lo llevamos</h3><p>Península, Portugal y Baleares. Gratis desde 70 € en un mismo pedido.</p></li>
+    <li><img src="dc/img/tienda-2.jpg" width="640" height="800" loading="lazy" alt="Fotograma de un vídeo de la tienda en Instagram"><h3>Si es preventa</h3><p>Sale del almacén el día que llega. Si mezclas productos, va todo junto.</p></li>
+    <li><img src="dc/img/tienda-7.jpg" width="640" height="800" loading="lazy" alt="Fotograma de un vídeo de la tienda en Instagram"><h3>¡A tu mesa!</h3><p>A jugar. Y si no te convence, tienes 14 días hábiles para devolverlo en su embalaje original.</p></li>
+  </ol>
+
+  <!-- Ticket "Comprar aquí": compacto; se amplía con el botón -->
+  <div class="dc-ticket">
+    <h2 class="dc-ticket__t">Comprar aquí</h2>
+    <dl class="dc-ticket__res">
+      <div><dt>Recogida en tienda</dt><dd>en 2 h</dd></div>
+      <div><dt>Envío a domicilio</dt><dd>gratis desde 70 €</dd></div>
+      <div><dt>Pago</dt><dd>tarjeta, Bizum, PayPal</dd></div>
+      <div><dt>Devoluciones</dt><dd>14 días hábiles</dd></div>
+    </dl>
+    <div class="dc-ticket__mas" id="dc-ticket-mas" hidden>
+      <h3>Recibirlo</h3>
+      <dl>
+        <div><dt>Recogida en tienda</dt><dd>en 2 h</dd><dd class="d">Dentro del horario, en C/ Hermanos Pinzón, 54.</dd></div>
+        <div><dt>Envío a domicilio</dt><dd>gratis desde 70 €</dd><dd class="d">Península, Portugal y Baleares, en un mismo pedido. Sin envíos a Canarias, Ceuta ni Melilla.</dd></div>
+        <div><dt>Preventas</dt><dd>al llegar</dd><dd class="d">Salen el día que entran en el almacén. La fecha la da cada editorial.</dd></div>
+      </dl>
+      <h3>Pagar</h3>
+      <dl>
+        <div><dt>Visa y Mastercard</dt><dd>pago seguro</dd></div>
+        <div><dt>Bizum</dt><dd>sí</dd></div>
+        <div><dt>Transferencia</dt><dd>sí</dd></div>
+        <div><dt>PayPal</dt><dd>con su comisión</dd></div>
+      </dl>
+      <h3>Devolverlo</h3>
+      <dl>
+        <div><dt>Plazo</dt><dd>14 días hábiles</dd><dd class="d">En su embalaje original. Antes, escríbenos a clientes.dchg@gmail.com para darte un número de incidencia.</dd></div>
+      </dl>
+      <p class="dc-ticket__links"><a href="content_1-envios.html">Envíos y preventas</a> · <a href="content_6-devoluciones-y-reembolsos.html">Devoluciones</a> · <a href="content_5-pago-seguro.html">Pago seguro</a></p>
+    </div>
+    <button type="button" class="dc-ticket__btn" aria-expanded="false" aria-controls="dc-ticket-mas">Ver todas las condiciones</button>
+  </div>
+</section>
