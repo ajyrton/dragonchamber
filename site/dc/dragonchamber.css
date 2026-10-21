@@ -165,3 +165,8 @@ html[data-theme=dark] .elementor-element-d2467b4 .elementor-heading-title{color:
 
 /* Subcategorías TCG: el dorso es la propia imagen, sin el marco blanco del tema */
 .subcategory-image a:has(.dc-card){border:0!important;padding:0!important;background:none!important;box-shadow:none!important}
+/* Subcategorías TCG centradas en su caja; si no caben, la fila se sigue desplazando sin cortar la primera */
+#subcategories .dc-tcg-list{justify-content:center!important}
+#subcategories .dc-tcg-list>li:first-child{margin-left:auto!important}
+#subcategories .dc-tcg-list>li:last-child{margin-right:auto!important}
+@media (max-width:767px){#subcategories .dc-tcg-list{justify-content:flex-start!important;gap:8px!important}}
