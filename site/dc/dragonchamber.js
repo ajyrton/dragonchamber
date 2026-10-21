@@ -32,8 +32,8 @@
   var BACKS = {
     '179': '<img src="dc/img/dorsos/magic.jpg" alt="">',
     '181': '<img src="dc/img/dorsos/yugioh.jpg" alt="">',
-    '182': '<svg viewBox="0 0 250 350" aria-hidden="true"><rect width="250" height="350" fill="#0e2a4d"/><g fill="none" stroke="#6cc3e8" stroke-width="2.5" opacity=".7"><path d="M0 250 q31 -24 62 0 t62 0 t62 0 t64 0"/><path d="M0 280 q31 -24 62 0 t62 0 t62 0 t64 0"/><path d="M0 310 q31 -24 62 0 t62 0 t62 0 t64 0"/></g><rect x="10" y="10" width="230" height="330" rx="10" fill="none" stroke="#f3d27a" stroke-width="3"/><circle cx="125" cy="140" r="64" fill="none" stroke="#f3d27a" stroke-width="3"/><path d="M125 76 L137 140 L125 204 L113 140Z" fill="#d94a3a"/><path d="M61 140 L125 128 L189 140 L125 152Z" fill="#f3d27a"/><circle cx="125" cy="140" r="7" fill="#0e2a4d"/></svg>',
-    '185': '<svg viewBox="0 0 250 350" aria-hidden="true"><defs><radialGradient id="dc-r" cx=".5" cy=".5" r=".7"><stop offset="0" stop-color="#2f6ee8"/><stop offset=".5" stop-color="#1b1f5e"/><stop offset="1" stop-color="#0b0b24"/></radialGradient></defs><rect width="250" height="350" fill="url(#dc-r)"/><rect x="10" y="10" width="230" height="330" rx="10" fill="none" stroke="#9fd0ff" stroke-width="3"/><g fill="none" stroke="#9fd0ff" stroke-width="2"><path d="M125 55 C190 100 190 250 125 295 C60 250 60 100 125 55Z"/><path d="M125 95 C165 130 165 220 125 255 C85 220 85 130 125 95Z"/></g><path d="M125 55 L112 175 L125 295 L138 175Z" fill="#9fd0ff" opacity=".8"/></svg>'
+    '182': '<img src="dc/img/dorsos/onepiece.jpg" alt="">',
+    '185': '<img src="dc/img/dorsos/riftbound.jpg" alt="">'
   };
 
   function setupTcgBacks() {

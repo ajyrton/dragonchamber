@@ -19,3 +19,6 @@ __pycache__/
 .claude/agents/
 .claude/settings.local.json
 .impeccable/
+
+# Vídeos de trabajo (no se publican)
+dorso cartas/*.mp4
