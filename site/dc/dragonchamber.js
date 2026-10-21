@@ -48,8 +48,8 @@
       var c = a.firstChild;
       li.addEventListener('mousemove', function (e) {
         var r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
-        c.style.setProperty('--ry', ((x - .5) * 24) + 'deg');
-        c.style.setProperty('--rx', ((.5 - y) * 24) + 'deg');
+        c.style.setProperty('--ry', ((x - .5) * 40) + 'deg');
+        c.style.setProperty('--rx', ((.5 - y) * 40) + 'deg');
         c.style.setProperty('--mx', x * 100 + '%');
         c.style.setProperty('--my', y * 100 + '%');
       });
