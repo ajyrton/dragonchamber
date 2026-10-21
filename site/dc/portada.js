@@ -226,7 +226,8 @@
     });
   }
   /* ---------- 4. Dorsos TCG: se inclinan hacia el ratón y brillan ---------- */
-  if (!reduce && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  // Se activa siempre con ratón: es un movimiento pequeño que solo ocurre mientras se pasa por encima
+  if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
     document.querySelectorAll('.dc-tcgcard').forEach(function (t) {
       var c = t.querySelector('.dc-tcgcard__card');
       t.addEventListener('mousemove', function (e) {

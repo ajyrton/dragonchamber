@@ -162,3 +162,6 @@ html[data-theme=dark] .elementor-element-d2467b4 .elementor-heading-title{color:
 .elementor-element-d2467b4 > .elementor-widget-container{padding:4px 10px!important}
 /* "Fuera de stock": rojo algo más oscuro para llegar a contraste AA con el texto blanco */
 .product-flag.out_of_stock,.product-flag.out-of-stock{background-color:#c9302c!important}
+
+/* Subcategorías TCG: el dorso es la propia imagen, sin el marco blanco del tema */
+.subcategory-image a:has(.dc-card){border:0!important;padding:0!important;background:none!important;box-shadow:none!important}
